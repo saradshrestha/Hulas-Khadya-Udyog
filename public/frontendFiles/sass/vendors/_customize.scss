@@ -1,0 +1,85 @@
+// bootstrap container mx-auto issue
+.container{
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+// owl carousel - explore slider
+.explore-slider{
+    position: relative;
+    .owl-dots{
+    margin-top: 48px;
+        .owl-dot{
+            button{
+                background-color: $clr-white;
+                @include size(20px);
+                border-radius: 2px;
+                border: 1px solid #fff!important;
+                @include flex-center;
+                @include font-size(13px);
+                margin: 0 3px;
+            }
+
+            &.active{
+                button{
+                    background-color: $clr-nero!important;
+                    color: $clr-white;
+                }
+            }
+        }
+    }
+    .owl-nav{
+        .owl-prev{
+            position: absolute;
+            left: calc(50% - 100px);
+            bottom: -8px;
+            border-radius: 50%;
+            span{
+                background-color: $clr-white;
+                width: 28px;
+                height: 28px;
+                @include flex-center;
+                border-radius: 50%;
+                font-size: 30px;
+                padding-bottom: 3px;
+                color: $clr-nero;
+
+                &:hover{
+                    border-radius: 50%;
+                    color: $clr-nero;
+                }
+            }
+        }
+        .owl-next{
+            position: absolute;
+            right: calc(50% - 100px);
+            bottom: -8px;
+            border-radius: 50%;
+            span{
+                background-color: $clr-white;
+                width: 28px;
+                height: 28px;
+                @include flex-center;
+                border-radius: 50%;
+                font-size: 30px;
+                padding-bottom: 3px;
+                color: $clr-nero;
+
+                &:hover{
+                    border-radius: 50%;
+                    color: $clr-nero;
+                }
+            }
+        }
+    }
+}
+
+.header-slider{
+    .owl-dots{
+        .owl-dot{
+            span{
+                width: 100px;
+            }
+        }
+    }
+}

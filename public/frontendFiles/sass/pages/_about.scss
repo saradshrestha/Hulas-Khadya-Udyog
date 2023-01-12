@@ -1,0 +1,97 @@
+.sw-pg-about{
+    .about-hero-wrapper{
+        background: url("../../assets/images/pg-about/about-hero-img.png") center/cover no-repeat;
+        min-height: 577px;
+        .about-hero-title{
+            h3{
+                letter-spacing: 0.225em;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .about-itms{
+        .about-itm{
+            .about-itm-p{
+                font-size: 17px;
+                letter-spacing: 0.08em;
+                text-align: justify;
+                margin-bottom: 32px;
+            }
+
+            .about-block{
+                .about-block-itm{
+                    position: relative;
+                    margin: 8px;
+
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        @include bgColor(rgba(0, 0, 0, 0.3));
+                        @include transition-ease;
+                    }
+
+                    &:hover{
+                        &::after{
+                            @include bgColor(rgba(0, 0, 0, 0.1));
+                        }
+                    }
+
+                    .about-block-itm-txt{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        padding: 24px;
+                        z-index: 3;
+                    }
+                }
+                .about-block-l{
+                    .about-block-itm{
+                        height: 438px;
+                    }
+                }
+                .about-block-r{
+                    .about-block-itm{
+                        height: 438px;
+                        @include breakpoint-up(xxl){
+                            height: 890px;
+                        }
+                    }
+                }
+            }
+
+            .about-block{
+                position: relative;
+                &.video-block{
+                    video{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                #play-pause-btn{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    border: none;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                    @include transition-ease;
+
+                    &:hover{
+                        transform: translate(-50%, -50%) scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}
