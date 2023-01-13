@@ -143,24 +143,5 @@ function getCategoriesWithProducts(){
     return $allCategories;
 }
 
-function getTVCategoriesWithProducts(){
-    $allCategories = Category::active()->where(function($q){
-                        $q->where('parent_id',0)
-                            ->orWhere('parent_id', null);
-                        })
-                        ->where('slug','tv')
-                        ->with('children')
-                        ->orderBy('category_position','ASC')->first();
-    return $allCategories;
-}
 
-function getOtherCategoriesWithProducts(){
-    $allCategories = Category::active()->where(function($q){
-                        $q->where('parent_id',0)
-                            ->orWhere('parent_id', null);
-                        })
-                        ->where('slug','!=','tv')
-                        ->with('children')
-                        ->orderBy('category_position','ASC')->get();
-    return $allCategories;
-}
+

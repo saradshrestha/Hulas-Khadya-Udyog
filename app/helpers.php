@@ -237,11 +237,6 @@ function returnGobalPost($post_type)
 }
 
 
-function getCategoryParents($category_id)
-{
-    $category = Category::select('id', 'title', 'parent_id')->where('id', $category_id)->first();
-}
-
 function gobalPostImage($id, $type = null, $imgclass = null, $imgid = null)
 {
     $post = GobalPost::find($id);

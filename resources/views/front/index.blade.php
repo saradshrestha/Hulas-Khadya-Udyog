@@ -2,40 +2,46 @@
 
 @section('pageTitle', 'Home | ' . getSiteSetting('site_title'))
 
-
+{{-- 
 @section('banner')
     @include('front.layouts.banner')
-@endsection
+@endsection --}}
 
 @section('content')
 
 <div class="d-none d-md-block">
     <div class="ls-wp-container fitvidsignore hero-2 as-hero-carousel" style="width:1920px;height:800px;margin:0 auto;margin-bottom: 0px;">
+        @if (isset($banners) && count($banners) > 0)
+                @foreach ( $banners as $banner )
 
+                
+                    {{-- @dd($banner) --}}
+                    <div class="ls-slide" data-ls="duration:6000; transition2d:5,114; kenburnsscale:1.2;">
+                        <img width="1920" height="800" src="{{ $banner->image ?? asset('frontendFiles/assets/img/hero/hero_bg_1_1.jpg') }}" class="ls-bg" alt="bg">
+                    
+                        {{-- <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;"> --}}
+                        @php
+                            $side_banner = getPostFieldData($banner,'sub-banner-image');
+                            
+                        @endphp
+                        <img width="943" height="763" src="{{ ($side_banner) ?? asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+                       
+                      
+
+                        {{-- <ls-layer style='text-align:center; font-weight:700; cursor:pointer; width:30px; height:30px; left:110px; top:345px; line-height:32px; background-size:contain; background-position:50% 50%; font-size:12px; color:#ffffff; background-image:url("assets/img/hero/dot_bg.png");' class="ls-l ls-hide-tablet ls-hide-phone ls-button-layer" data-ls="durationin:400; position:fixed;">
+                            {{ $loop->iteration }}
+                        </ls-layer>
+                      
+
+
+
+                         <img width="2" height="100" src="{{ asset('frontendFiles/assets/img/hero/dot_line.png')}}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:236px;" data-ls="static:forever; position:fixed;">
+                        <img width="2" height="100" src="{{ asset('frontendFiles/assets/img/hero/dot_line_2.png') }}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:464px;" data-ls="static:forever; position:fixed;"> --}}
+                    </div>
+                @endforeach
+        @endif
         <!-- Slide 1-->
-        <div class="ls-slide" data-ls="duration:2000; transition2d:5,114; kenburnsscale:1.2;">
-            <img width="1920" height="800" src="{{ asset('frontendFiles/assets/img/hero/hero_bg_1_1.jpg') }}" class="ls-bg" alt="bg">
-          
-            {{-- <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
 
-            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
-            <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png') }}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;"> --}}
-           
-            {{-- <img width="2" height="100" src="assets/img/hero/dot_line.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:236px;" data-ls="static:forever; position:fixed;">
-            <img width="2" height="100" src="assets/img/hero/dot_line_2.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:464px;" data-ls="static:forever; position:fixed;"> --}}
-        </div>
-
-        <div class="ls-slide" data-ls="duration:2000; transition2d:5,114; kenburnsscale:1.2;">
-            <img width="1920" height="800" src="{{ asset('frontendFiles/assets/img/hero/hero_bg_1_1.jpg') }}" class="ls-bg" alt="bg">
-          
-            {{-- <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-
-            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
-            <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png') }}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;"> --}}
-           
-            {{-- <img width="2" height="100" src="assets/img/hero/dot_line.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:236px;" data-ls="static:forever; position:fixed;">
-            <img width="2" height="100" src="assets/img/hero/dot_line_2.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:464px;" data-ls="static:forever; position:fixed;"> --}}
-        </div>
 
 
       
