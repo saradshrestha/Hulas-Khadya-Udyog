@@ -131,7 +131,7 @@ class Product extends Model
     }
 
     public function finishedProducts(){
-        return $this->hasMany(FinishedProduct::class);
+        return $this->belongsToMany(Product::class,'product_recpies','product_id','finished_product_id');
     }
 
     public function category(){

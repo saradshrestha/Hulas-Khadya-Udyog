@@ -68,7 +68,7 @@
                 <a href="#finalproducts" data-active="{{ (Request::routeIs('admin.finishedProduct*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="fab fa-product-hunt"></i>
-                        <span>Final Products</span>
+                        <span>Recipes</span>
                     </div>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -76,10 +76,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled {{ (Request::routeIs('admin.finishedProduct*')) ? 'show' : ''}}" id="finalproducts" data-parent="#accordionExample">
                     <li class="{{ (Request::routeIs('admin.finishedProduct.index')) ? 'active' : ''}}">
-                        <a href="{{ route('admin.finishedProduct.index')}}"> All Final Products </a>
+                        <a href="{{ route('admin.finishedProduct.index')}}"> All Recipes </a>
                     </li>
                     <li class="{{ (Request::routeIs('admin.product.addProduct')) ? 'active' : ''}}">
-                        <a href="{{ route('admin.finishedProduct.create') }}"> Add New Final Product </a>
+                        <a href="{{ route('admin.finishedProduct.create') }}"> Add New Recipes </a>
                     </li>
                 </ul>
             </li>

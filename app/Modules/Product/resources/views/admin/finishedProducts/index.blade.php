@@ -48,7 +48,7 @@
                                         <th class="text-center">S.No.</th>
                                         <th>Product Title</th>
                                         <th>Product Image</th>
-                                        <th>Main Product</th>
+                                        <th>Main Products</th>
                                         <th width=14%>Action</th>
                                     </tr>
                                 </thead>
@@ -62,7 +62,7 @@
                                                     <img src="{{getOrginalUrl($product->image_id)}}" width="80">
                                                 </td>
 
-                                                <td class="">{{ $product->mainProduct->title }}</td>
+                                                <td class="">{{ $product->products->implode('title',', ') }}</td>
 
                                                 <td>
                                                     <span>

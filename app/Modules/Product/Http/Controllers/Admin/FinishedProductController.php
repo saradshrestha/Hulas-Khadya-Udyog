@@ -58,28 +58,31 @@ class FinishedProductController extends Controller
 
     public function store(Request $request){
         try{
-            // dd($request->all());
-            $product = new FinishedProduct();
-            $product->title = $request->title;
-            $product->description = $request->product_specs;
-            $product->product_id = $request->product;    
+            dd($request->all());
+            $finished_product = new FinishedProduct();
+            $finished_product->title = $request->title;
+            $finished_product->description = $request->product_specs;
+         
+            $finished_product->video_link = $request->video_link; 
+
             if($request->hasFile('feature_image')){
                 $uploaded = $this->file->storeFile($request->feature_image);
                 if ($uploaded) {
-                    $product->image_id = $uploaded->id;
+                    $finished_product->image_id = $uploaded->id;
                 }
             }
-            $product->seoable()->create([
+            $finished_product->seoable()->create([
                 'img_alt'=>$request->img_alt??$request->title,
                 'img_title'=>$request->img_title??$request->title,
                 'meta_title'=>$request->meta_title??$request->title,
                 'meta_keyword'=>$request->meta_keyword?serialize($request->meta_keyword):null,
                 'meta_description'=>$request->meta_description,
             ]);
-            if($product->save() == false ){
+            if($finished_product->save() == false ){
                 Toastr::error("Something Went Wrong While Adding The Finidhed Product");
                 return redirect()->back();
             }
+            $finished_product->products()->attact($request->product);
             Toastr::success('Successfully Added');
             return redirect()->back();
         }catch(\Exception $e){
@@ -110,13 +113,14 @@ class FinishedProductController extends Controller
     }
 
     public function update(Request $request, $slug){
-        try{
+        // try{
             // dd($request->all());
             $product = FinishedProduct::where('slug',$slug)->first();
             if($slug){
                 $product->title = $request->title;
                 $product->description = $request->product_specs;
-                $product->product_id = $request->product;    
+                $product->video_link = $request->video_link;  
+               
                 if($request->hasFile('feature_image')){
                     $uploaded = $this->file->storeFile($request->feature_image);
                     if ($uploaded) {
@@ -124,6 +128,7 @@ class FinishedProductController extends Controller
                     }
                 }
                 if($product->update() == true){
+                    $product->products()->sync($request->product,false);
                     $product->seoable()->updateOrCreate(['seoable_id'=>$product->id, 'seoable_type'=>FinishedProduct::class],[
                         'img_alt'=>$request->img_alt??$request->title,
                         'img_title'=>$request->img_title??$request->title,
@@ -137,10 +142,10 @@ class FinishedProductController extends Controller
                 }
             }
            
-        }catch(\Exception $e){
-            Toastr::error($e->getMessage());
-            return redirect()->back();
-        }
+        // }catch(\Exception $e){
+        //     Toastr::error($e->getMessage());
+        //     return redirect()->back();
+        // }
     }
 
 

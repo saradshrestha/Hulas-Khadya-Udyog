@@ -77,9 +77,9 @@
 
     <script>
         var firstUpload = new FileUploadWithPreview('feature_image');
-          $(".tagging").select2({
-        tags: true
-    });
+        $(".tagging").select2({
+            tags: true
+        });
     </script>
 
     <script>

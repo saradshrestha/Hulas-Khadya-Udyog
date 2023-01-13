@@ -61,7 +61,7 @@
                         <h4>Edit product</h4>
                     </div>
                     <div class="col-md-6 text-md-right ">
-                        <a href="{{ route('admin.product.allProducts') }}" class=" btn btn-primary">Back to all product</a>
+                        <a href="{{ route('admin.finishedProduct.index') }}" class=" btn btn-primary">Back to all product</a>
                     </div>
                 </div>
              

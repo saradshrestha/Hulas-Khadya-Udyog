@@ -5,49 +5,81 @@
                 <div class="widget-header">
                     <div class="row">
                         <div class="col-xl-12 col-md-12 col-sm-12 col-12">
-                            <h4>Final Product Information</h4>
+                            <h4>Recipe Information</h4>
                         </div>
                     </div>
                 </div>
                 <div class="widget-content widget-content-area">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="title">Title <span class="text-danger">*</span></label>
-                                {!! Form::text('title', old('title') ?? ($product->title ?? ''), [
-                                    'class' => 'form-control',
-                                    'placeholder' => 'Title',
-                                    'required' => 'required',
-                                    'id' => 'title',
-                                ]) !!}
-                                @if ($errors->has('title'))
-                                    <div class="alert alert-danger">{{ $errors->first('title') }}</div>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="product">Select Main Product</label>
-                                <select name="product" id="product" class="form-control " required>
-                                    <option selected disabled>Select Main Product</option>
-                                    @if (isset($products))
-                                        @foreach ($products as $mainProduct)
-                                            <option value="{{ $mainProduct->id }}"
-                                                {{ (isset($product) && $product->product_id) || old('product') == $mainProduct->id ? 'selected' : '' }}>
-                                                {{ $mainProduct->title }}</option>
-                                        @endforeach
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="title">Title <span class="text-danger">*</span></label>
+                                    {!! Form::text('title', old('title') ?? ($product->title ?? ''), [
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Title',
+                                        'required' => 'required',
+                                        'id' => 'title',
+                                    ]) !!}
+                                    @if ($errors->has('title'))
+                                        <div class="alert alert-danger">{{ $errors->first('title') }}</div>
                                     @endif
-                                </select>
-                                @if ($errors->has('product'))
-                                    <div class="alert alert-danger">{{ $errors->first('product') }}</div>
-                                @endif
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="product">Select Products</label>
+                                    <select name="product[]" id="product" class="form-control tagging" multiple="multiple" required>
+                                        <option selected disabled>Select Products</option>
+                                        {{-- @if (isset($products))
+                                            @foreach ($products as $mainProduct)
+            
+                                                <option value="{{ $mainProduct->id }}"
+                                                  
+                                                    >
+                                                    {{ $mainProduct->title }}</option>
+                                            @endforeach
+                                        @endif --}}
+
+                                        @if(isset($products) && $products->count() > 0)
+                                            @foreach ($products as $mainProduct1)
+                                            <option value="{{ $mainProduct1->id }}"
+                                                @if (isset($product))
+                                                    @foreach ($product->products as $cat )
+                                                        @if ($cat->id == $mainProduct1->id)
+                                                        selected
+                                                        @endif
+                                                    @endforeach
+                                                @endif>
+                                                {{ $mainProduct1->title }}
+                                            </option>
+                                            @endforeach
+                                        @endif
+
+
+
+
+                                    </select>
+                                    @if ($errors->has('product'))
+                                        <div class="alert alert-danger">{{ $errors->first('product') }}</div>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="video_link">Video Link</label>
+                                    {!! Form::text('video_link', old('video_link') ?? ($product->video_link ?? ''), [
+                                        'class' => 'form-control',
+                                        'placeholder' => 'Video Link',
+                                        
+                                        'id' => 'video_link',
+                                    ]) !!}
+                                    @if ($errors->has('video_link'))
+                                        <div class="alert alert-danger">{{ $errors->first('video_link') }}</div>
+                                    @endif
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row">
-
                         <div class="col-md-6">
                             <div class="form-group">
                                 <div class="custom-file-container" data-upload-id="feature_image">
@@ -65,18 +97,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Product Specifications</label>
-                                <textarea name="product_specs" class="summernote" id="summernote">
-                                    {!! $product->description ?? old('product_specs') !!}
-                                </textarea>
-                                @error('product_specs')
-                                    <div class="text-danger">{{ $message }}</div>
-                                @enderror
-                            </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Recipe Details</label>
+                            <textarea name="product_specs" class="summernote" id="summernote">
+                                {!! $product->description ?? old('product_specs') !!}
+                            </textarea>
+                            @error('product_specs')
+                                <div class="text-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -121,7 +154,11 @@
                                     @if (!empty($keywords))
                                         @foreach ($keywords as $keyword)
                                             <option value="{{ $keyword }}"
-                                                @if (isset($product) && $product->seoable && $product->seoable->meta_keyword) @foreach (unserialize($product->seoable->meta_keyword) as $thiskeyword) {{ $thiskeyword == $keyword ? 'selected' : '' }} @endforeach @endif>
+                                                @if (isset($product) && $product->seoable && $product->seoable->meta_keyword) 
+                                                @foreach (unserialize($product->seoable->meta_keyword) as $thiskeyword) 
+                                                    {{ $thiskeyword == $keyword ? 'selected' : '' }} 
+                                                    @endforeach 
+                                                @endif>
                                                 {{ $keyword }}</option>
                                         @endforeach
                                     @endif
