@@ -48,9 +48,11 @@
                                         <th class="text-center">S.No.</th>
                                         <th>Product Title</th>
                                         <th>Feature Image</th>
+                                        <th class="text-center">Product Category</th>
+
                                         <th>Status</th>
                                         <th>Featured Product</th>
-                                        <th width=14%>Action</th>
+                                        <th width=10%>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,6 +64,9 @@
                                             
                                                 <td>
                                                     <img src="{{ asset($product->feature_url['thumbnail_image']) }}" style="height: 100px" width="100px" alt=" {{ $product->title }}">
+                                                </td>
+                                                <td class="text-center">
+                                                    <span class="badge badge-primary">{{ $product->category->title ?? 'N/A'}}</span>
                                                 </td>
                                                
                                                 <td>

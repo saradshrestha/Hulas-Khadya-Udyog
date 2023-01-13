@@ -50,10 +50,12 @@
                             <div class="form-group">
                                 <label for="category">Select Category</label>
                                 <select name="category" id="category" class="form-control " required>
+
                                     @if (isset($categories) && count($categories) > 0)
                                         <option selected disabled>Choose One...</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" >{{ $category->title}}</option>
+                                            <option value="{{ $category->id }}" {{ (old('category') ?? $product->category_id) == $category->id  ? 'selected' : '' }} 
+                                                >{{ $category->title }}</option>
                                         @endforeach
                                     @else
                                         <option selected disabled>Please Create Category First.</option>

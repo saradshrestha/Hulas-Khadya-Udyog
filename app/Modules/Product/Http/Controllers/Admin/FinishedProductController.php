@@ -128,7 +128,7 @@ class FinishedProductController extends Controller
                     }
                 }
                 if($product->update() == true){
-                    $product->products()->sync($request->product,false);
+                    $product->products()->sync($request->product);
                     $product->seoable()->updateOrCreate(['seoable_id'=>$product->id, 'seoable_type'=>FinishedProduct::class],[
                         'img_alt'=>$request->img_alt??$request->title,
                         'img_title'=>$request->img_title??$request->title,

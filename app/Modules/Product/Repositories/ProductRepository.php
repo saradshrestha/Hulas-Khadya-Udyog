@@ -126,8 +126,6 @@ class ProductRepository implements ProductInterface {
                 $product->feature_image = $uploaded->id;
             }
         }
-
-
         $product->update();
 
        
