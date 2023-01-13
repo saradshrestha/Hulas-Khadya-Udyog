@@ -24,7 +24,7 @@
                 </ul>
             </li>
 
-            {{-- <li class="menu">
+            <li class="menu">
                 <a href="#product_category" data-active="{{ (Request::routeIs('admin.category*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="fas fa-boxes"></i>
@@ -42,7 +42,7 @@
                         <a href="{{ route('admin.category.addCategory') }}"> Add New Category </a>
                     </li>
                 </ul>
-            </li> --}}
+            </li>
 
             <li class="menu">
                 <a href="#products" data-active="{{ (Request::routeIs('admin.product*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">

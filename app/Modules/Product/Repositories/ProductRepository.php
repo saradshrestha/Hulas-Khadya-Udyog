@@ -80,30 +80,8 @@ class ProductRepository implements ProductInterface {
                 $product->feature_image = $uploaded->id;
             }
         }
-
-        if($request->hasFile('product_manual')){
-            $uploaded = $this->file->storeFile($request->product_manual);
-            if ($uploaded) {
-                $product->manual_pdf_id = $uploaded->id;
-            }
-        }
         $product->save();
 
-
-        // if($request->spec){
-        //     $speckeys = array_keys($request->spec);
-
-        //     foreach($speckeys as $key){
-
-        //             $uploaded = $this->file->storeFile($request->spec[$key]['image']);
-        //             $product->productMeta()->create([
-        //                 'title' => $request->spec[$key]['title'],
-        //                 'image_id' => $uploaded->id
-        //             ]);
-
-        //     }
-
-        // }
         if($product && $request->image_ids){
             foreach($request->image_ids as $image){
                 $uploaded = $this->file->storeFile($image);
@@ -149,48 +127,10 @@ class ProductRepository implements ProductInterface {
             }
         }
 
-        if($request->hasFile('product_manual')){
-            $uploaded = $this->file->storeFile($request->product_manual);
-            if ($uploaded) {
-                $product->manual_pdf_id = $uploaded->id;
-            }
-        }
 
         $product->update();
 
-        // if($request->spec){
-
-        //     $speckeys = array_keys($request->spec);
-
-        //     foreach($speckeys as $key){
-        //         if(isset($request->spec[$key]['image'])){
-        //             $uploaded = $this->file->storeFile($request->spec[$key]['image']);
-        //               $product->productMeta()->updateOrCreate([
-        //                 'id' => $key,
-
-        //             ], [
-        //                 'title' => $request->spec[$key]['title'],
-        //                 'image_id' => $uploaded->id
-
-        //             ]);
-
-        //         }else{
-        //             $productMeta = ProductMeta::where('product_id', $product->id)
-        //             ->where('id', $key)->first();
-        //              $product->productMeta()->updateOrCreate([
-        //                     'id' => $key,
-
-        //                 ], [
-        //                     'title' => $request->spec[$key]['title'],
-        //                     'image_id' =>$productMeta->image_id
-
-        //                 ]);
-        //         }
-                   
-
-        //     }
-
-        // }
+       
         if($product && $request->image_ids){
             foreach($request->image_ids as $image){
                 $uploaded = $this->file->storeFile($image);

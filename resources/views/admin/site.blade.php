@@ -157,16 +157,43 @@
 
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="title">Message From President<span class="text-danger">*</span></label>
-                            {{ Form::textarea('message', old('message') ?? (getSiteSetting('message') ?? '')) }}
-                            <small class="text-danger alert-message">{{ $errors->first('message') }}</small>
+                            <label for="company_vision">Company Vision<span class="text-danger">*</span></label>
+                            {{ Form::textarea('company_vision', old('company_vision') ?? (getSiteSetting('company_vision') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('company_vision') }}</small>
                         </div>
                         <div class="form-group col-md-6">
-
-                            <label for="title">About Us<span class="text-danger">*</span></label>
+                            <label for="product_description">Product Short Description<span class="text-danger">*</span></label>
+                            {{ Form::textarea('product_description', old('product_description') ?? (getSiteSetting('product_description') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('product_description') }}</small>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="about">About Us<span class="text-danger">*</span></label>
                             {{ Form::textarea('about', old('about') ?? (getSiteSetting('about') ?? '')) }}
                             <small class="text-danger alert-message">{{ $errors->first('about') }}</small>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="about_agrim_food">About Agrim Foods<span class="text-danger">*</span></label>
+                            {{ Form::textarea('about_agrim_food', old('about_agrim_food') ?? (getSiteSetting('about_agrim_food') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('about_agrim_food') }}</small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label for="privacy_policy">Privacy policy<span class="text-danger">*</span></label>
+                            {{ Form::textarea('privacy_policy', old('privacy_policy') ?? (getSiteSetting('privacy_policy') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('privacy_policy') }}</small>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="security">Security<span class="text-danger">*</span></label>
+                            {{ Form::textarea('security', old('security') ?? (getSiteSetting('security') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('security') }}</small>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="terms_conditions">Terms and Conditions<span class="text-danger">*</span></label>
+                            {{ Form::textarea('terms_conditions', old('terms_conditions') ?? (getSiteSetting('terms_conditions') ?? '')) }}
+                            <small class="text-danger alert-message">{{ $errors->first('terms_conditions') }}</small>
+                        </div>
+                      
                     </div>
 
                     <div class="card">
@@ -177,7 +204,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <p>President Image</p>
+                                        <p>Agrim Foods Image</p>
                                         <div class="custom-file-container" data-upload-id="presidentImage">
                                             <label>Clear <a href="javascript:void(0)"
                                                     class="custom-file-container__image-clear"
@@ -213,22 +240,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="col-md-3">
-                                    <div class="form-group">
-                                        <p>K.L. Dugar About Us Image</p>
-                                        <div class="custom-file-container" data-upload-id="myFourthImage">
-                                            <label>Clear <a href="javascript:void(0)" class="custom-file-container__image-clear"
-                                                    title="Clear Image">x</a></label>
-                                            <label class="custom-file-container__custom-file">
-                                                <input type="file" class="custom-file-container__custom-file__custom-file-input"
-                                                    accept="image/*" name="about_us_kldugar_image">
-                                                <input type="hidden" name="MAX_FILE_SIZE" value="10485760" />
-                                                <span class="custom-file-container__custom-file__custom-file-control"></span>
-                                            </label>
-                                            <div class="custom-file-container__image-preview"></div>
-                                        </div>
-                                    </div>
-                                </div> --}}
+                               
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <p>Site Logo</p>

@@ -18,7 +18,7 @@ class Product extends Model
             'feature_image', 'user_id',
             'category_id', 'highlights',
             'specification','product_position',
-            'user_id','category_id','purchase_link','is_featured'
+            'user_id','purchase_link','is_featured'
     ];
 
     protected static function boot()
@@ -132,6 +132,10 @@ class Product extends Model
 
     public function finishedProducts(){
         return $this->hasMany(FinishedProduct::class);
+    }
+
+    public function category(){
+        return $this->belongsTo(Category::class,'category_id');
     }
 
 

@@ -34,7 +34,7 @@ class CategoryRepository implements CategoryInterface
         $category = new Category();
         $category->title = $request->title;
         $category->sub_title = $request->sub_title;
-        $category->parent_id = $request->parent_category;
+        // $category->parent_id = $request->parent_category;
         $category->category_icon = $request->category_icon;
         $category->status = $request->status;
         $category->category_position = $request->category_position;
@@ -75,7 +75,7 @@ class CategoryRepository implements CategoryInterface
         $category = Category::where('slug', $slug)->first();
         $category->title = $request->title;
         $category->sub_title = $request->sub_title;
-        $category->parent_id = $request->parent_category;
+        // $category->parent_id = $request->parent_category;
         $category->category_icon = $request->category_icon;
         $category->status = $request->status;
         $category->category_position = $request->category_position;

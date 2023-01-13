@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Testimonial\Http\Requests\TestimonialRequest;
+use Testimonial\Http\Requests\TestimonialUpdateRequest;
 use Testimonial\Models\Testimonial;
 use Testimonial\Repositories\TestimonialInterface;
 
@@ -69,7 +70,7 @@ class TestimonialController extends Controller
         }
     }
 
-    public function update(TestimonialRequest $request, $slug)
+    public function update(TestimonialUpdateRequest $request, $slug)
     {
         try {
             // dd($request->all());

@@ -50,10 +50,8 @@ class ProductController extends Controller
             $keywords = array_unique($keywords);
             // $allcategories = $this->product->getCategories();
 
-            $allcategories = Category::where('parent_id', 0)->orWhere('parent_id',0)->with('children')->get();
-            $quantityTypes = $this->product->getQuantityTypes();
-
-            return view('Product::admin.addProduct',compact('allcategories', 'quantityTypes', 'keywords'));
+            $categories = Category::latest()->get();
+            return view('Product::admin.addProduct',compact('categories','keywords'));
         // }catch(\Exception $e){
         //     Toastr::error($e->getMessage());
         //     return redirect()->back();
@@ -88,8 +86,9 @@ class ProductController extends Controller
             }
             $keywords = array_unique($keywords);
             $product = $this->product->getProductBySlugWithMeta($slug);
-            // dd($product);
-            return view('Product::admin.editProduct',compact('product', 'keywords'));  
+            $categories = Category::latest()->get();
+
+            return view('Product::admin.editProduct',compact('product', 'keywords','categories'));  
 
         }catch(\Exception $e){
             Toastr::error($e->getMessage());

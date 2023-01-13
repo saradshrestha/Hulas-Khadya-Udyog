@@ -15,7 +15,9 @@ use Category\Models\Category;
 use Exception;
 use Files\Repositories\FileInterface;
 use Illuminate\Http\Request;
+use Product\Models\FinishedProduct;
 use Product\Models\Product;
+use Testimonial\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -29,17 +31,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        $categories = Category::active()->featured()
-                        ->where('parent_id',null)
-                        ->orWhere('parent_id',0)
-                        ->orderBy('category_position','ASC')
-                        ->get();
+      
         $products = Product::active()->limit(6)->latest()->get();
-        $featured_products = Product::active()->featuredProduct()->limit(15)->get();
-        $offers = $this->cms->getGlobalPostByID(8,3);
+        $finalProducts = FinishedProduct::limit(6)->latest()->get();
         $banners = $this->cms->getGlobalPostByID(1);
-        
-        return view('front.index', compact( 'products','featured_products','categories','offers','banners'));
+        $testimonials = Testimonial::latest()->limit(6)->get();
+        return view('front.index', compact( 'products','banners','finalProducts','testimonials'));
     }
 
 

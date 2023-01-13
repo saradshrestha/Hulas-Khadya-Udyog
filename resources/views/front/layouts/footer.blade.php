@@ -1,4 +1,95 @@
-<footer class="ftr text-white">
+
+
+ <footer class="footer-wrapper footer-layout1">
+    <div class="widget-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-3">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">About {{ returnSiteSetting('site_title') ?? "Hulas Kadhya"}}</h3>
+                        <div class="as-widget-about">
+                            <p class="about-text">{{ returnSiteSetting('site_Description') ?? '' }}</p>
+                            <div class="as-social">
+                                <a href="{{ returnSiteSetting('fb_link') ?? 'https://www.fb.com/'}}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ returnSiteSetting('twitter_link') ?? 'https://www.twitter.com/'}}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ returnSiteSetting('youtube_link') ?? 'https://www.linkedin.com/'}}"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="{{ returnSiteSetting('insta_link') ?? 'https://www.instagram.com/'}}"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Quick Links</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="{{ route('aboutus') }}">About Us</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="project.html">Testimonial</a></li>
+                                <li><a href="{{ route('contact')}}">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Contact Now</h3>
+                        <div class="as-widget-contact">
+                            <div class="info-box">
+                                <div class="info-box_icon">
+                                    <i class="fal fa-location-dot"></i>
+                                </div>
+                                <p class="info-box_text">{{ returnSiteSetting('address') ?? "Kathmandu,Nepal"}}</p>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-box_icon">
+                                    <i class="fal fa-mobile-button"></i>
+                                </div>
+                                <p class="info-box_text">
+                                    <a href="tel:{{ returnSiteSetting('primary_phone')}}" class="info-box_link">{{ returnSiteSetting('primary_phone')}}</a><br>
+                                    <a href="tel:{{ returnSiteSetting('secondary_phone')}}" class="info-box_link">{{ returnSiteSetting('secondary_phone')}}</a>
+                                </p>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-box_icon">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <p class="info-box_text">
+                                    <a href="mailto:info@pizzer.com" class="info-box_link">{{ returnSiteSetting('primary_email')}}</a>
+                                    <a href="mailto:info.example@pizzer.com" class="info-box_link">{{ returnSiteSetting('secondary_email')}}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6">
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a href="https://themeforest.net/user/angfuz_soft">Angfuzsoft</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 text-end d-none d-lg-block">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="about.html">Privacy Policy</a></li>
+                            <li><a href="about.html">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+{{-- <footer class="ftr text-white">
     <div class="container px-0">
         <div class="ftr-content row text-center text-md-start">
             <div class="col-md-6 col-lg-6">
@@ -70,8 +161,7 @@
                                 </a></li>
                             <li class="mb-1"><a href="{{ route('warranty') }}" class="fw-3 fs-14">Repair & Warranty
                                 </a></li>
-                            {{-- <li class="mb-1"><a href="{{ route('warranty') }}" class="fw-3 fs-14">Manuals
-                                </a></li> --}}
+                           
                         </ul>
                     </div>
                 </div>
@@ -86,4 +176,4 @@
 
         </div>
     </div>
-</footer>
+</footer> --}}

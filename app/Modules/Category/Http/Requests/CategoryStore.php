@@ -25,7 +25,7 @@ class CategoryStore extends FormRequest
     {
         return [
             'title' => 'required',
-            'category_banner' => 'required',
+            
         ];
     }
 

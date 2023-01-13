@@ -2,15 +2,6 @@
 
 @section('pageTitle', 'Home | ' . getSiteSetting('site_title'))
 
-@push('styles')
-    <style>
-    .header-slider{
-        width:100%;
-        height:100%;
-        overflow: hidden;
-    }  
-    </style>
-@endpush
 
 @section('banner')
     @include('front.layouts.banner')
@@ -18,112 +9,273 @@
 
 @section('content')
 
-    <!-- products section -->
-    <section class = "product-sc mt-4" id = "product-sc">
-        <div class = "container">
-            <div class = "sc-title px-2">
-                <h3 class = "text-capitalize text-white">product category</h3>
+<div class="d-none d-md-block">
+    <div class="ls-wp-container fitvidsignore hero-2 as-hero-carousel" style="width:1920px;height:800px;margin:0 auto;margin-bottom: 0px;">
+
+        <!-- Slide 1-->
+        <div class="ls-slide" data-ls="duration:2000; transition2d:5,114; kenburnsscale:1.2;">
+            <img width="1920" height="800" src="{{ asset('frontendFiles/assets/img/hero/hero_bg_1_1.jpg') }}" class="ls-bg" alt="bg">
+          
+            {{-- <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+
+            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+            <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png') }}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;"> --}}
+           
+            {{-- <img width="2" height="100" src="assets/img/hero/dot_line.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:236px;" data-ls="static:forever; position:fixed;">
+            <img width="2" height="100" src="assets/img/hero/dot_line_2.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:464px;" data-ls="static:forever; position:fixed;"> --}}
+        </div>
+
+        <div class="ls-slide" data-ls="duration:2000; transition2d:5,114; kenburnsscale:1.2;">
+            <img width="1920" height="800" src="{{ asset('frontendFiles/assets/img/hero/hero_bg_1_1.jpg') }}" class="ls-bg" alt="bg">
+          
+            {{-- <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+
+            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+            <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png') }}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;"> --}}
+           
+            {{-- <img width="2" height="100" src="assets/img/hero/dot_line.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:236px;" data-ls="static:forever; position:fixed;">
+            <img width="2" height="100" src="assets/img/hero/dot_line_2.png" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; left:124px; top:464px;" data-ls="static:forever; position:fixed;"> --}}
+        </div>
+
+
+      
+    </div>
+</div>
+
+<!--==============================Feature Area=============================-->
+<section class="space">
+    <div class="container">
+        <div class="row gy-30 justify-content-center">
+            <div class="col-md-4 col-sm-6 feature-card-wrap">
+                <div class="feature-card">
+                    <div class="feature-card_icon">
+                        <img src="assets/img/icon/feature_1_1.svg" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="feature-card_title">Discount Voucher</h3>
+                        <p class="feature-card_text">Competently orchestrate integrated schema for quickly create.</p>
+                    </div>
+                </div>
             </div>
-            <div class = "product-sc-content">
-                <div class = "sw-cards row gx-0">
-                    @if(isset($categories) && $categories->count()> 0)
-                        @foreach ($categories as $category )
-                            <div class = "col-md-6 col-lg-4" >
-                                <a href="{{ route('productsByCategory',$category->slug)}}">
-
-                                <div class = "sw-card bg-nero" data-aos="fade-up">
-                                    <div class = "sw-card-img img-cover">
-                                        <img src = "{{ getOrginalUrl($category->logo)   }}" alt = "{{ $category->title}}">
-                                    </div>
-                                    <div class = "sw-card-body text-white">
-                                        <h6 class = "sw-card-title fw-5 text-bright-gray">{{ $category->title }}</h6>
-                                        
-                                        <p class="sw-card-p">{{ $category->sub_title  }}</p>
-                                              
-                                        {{-- <p class = "sw-card-p">Watch astonishing videos in 4K with SKYWORTH OLED TVs.</p> --}}
-                                    </div>
-                                </div>
-                                </a>
-
-                            </div>
-                        @endforeach
-                    @endif
-
+            <div class="col-md-4 col-sm-6 feature-card-wrap">
+                <div class="feature-card">
+                    <div class="feature-card_icon">
+                        <img src="assets/img/icon/feature_1_2.svg" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="feature-card_title">Fresh Healthy Foods</h3>
+                        <p class="feature-card_text">Quantimanes orchestrate integrated schema for quickly Taken.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 feature-card-wrap">
+                <div class="feature-card">
+                    <div class="feature-card_icon">
+                        <img src="assets/img/icon/feature_1_3.svg" alt="icon">
+                    </div>
+                    <div>
+                        <h3 class="feature-card_title">Fast Serve On Table</h3>
+                        <p class="feature-card_text">Mansikatils orchestrate integrated schema for quickly Harbest.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- end of products section -->
-
-    <!-- promotions and offers section -->
-    <section class = "promo-offers-sc " id = "promo-offers-sc">
-        {{-- @dd($offers) --}}
-        <div class = "container">
-            <div class = "sc-title px-2 d-md-flex justify-content-between align-items-center">
-                <h3 class = "text-capitalize text-white">promotions and offers</h3>
+    </div>
+</section>
+<!--==============================About Area==============================-->
+<div class="space-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-xxl-7 pe-xxl-5">
+                <div class="text-end">
+                    <img src="{{ getOrginalUrl(returnSiteSetting('about_us_image')) ?? asset('frontendFiles/assets/img/normal/about_1_1.png')}}" alt="About">
+                </div>
             </div>
-            <div class = "promo-offers-sc-content">
-                <div class = "sw-cards ">
-                    {{-- @dd($offers) --}}
-                  
-                    <div class = "col-12">
-                        <div class = "sw-card-wide bg-nero align-items-center owl-theme owl-carousel offer-slider">
-                            @if (isset($offers) && $offers->count() > 0)
-                            @foreach ($offers as $offer)
-                            <div class = "col-lg-12" data-aos="fade-right">
-                                <div class = "img-cover">
-                                    <a href="{{ getPostFieldData($offer,'reference-link') ?? '#'}}">
-                                        <img src = "{{ asset($offer->image) }}" alt="{{ $offer->title }}">
-                                    </a>
-                                </div>
+            <div class="col-xl-6 col-xxl-5 col-lg-9 mt-35 mt-xl-0">
+                <div class="title-area mb-30">
+                    <span class="sub-title">
+                        {{-- <img class="icon" src="{{ asset('frontenFiles/assets/img/icon/title_icon.svg')}}" alt="icon"> --}}
+                        About Us
+                    </span>
+                    {{-- <h2 class="sec-title">Real Delicious Food Straight To <span class="font-style text-theme">Your Table</span></h2> --}}
+                </div>
+                <p class="mt-n2 mb-4">
+                    {!! returnSiteSetting('site_Description') !!}
+                </p>
+               
+               
+                <div class="btn-wrap">
+                    <a href="{{ route('aboutus') }}" class="as-btn">DISCOVER MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="shape-mockup about-shape1" data-top="0%" data-left="0"><img src="assets/img/shape/bg_shape_1.png" alt="shapes"></div> --}}
+</div>
+
+<!--============================== Menu Area ==============================-->
+    <section class="space bg-smoke2">
+        <div class="container">
+            <div class="title-area text-center">
+                <span class="sub-title">
+                    Our Products
+                </span>
+                <h2 class="sec-title">Browse Our <span class="font-style text-theme">Products</span></h2>
+                <p class="sec-text ms-auto me-auto">{!! returnSiteSetting('product_description') !!}</p>
+            </div>
+            <div class="row as-carousel slider-shadow number-dots" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
+
+                @if (isset($products) && count($products)>0)
+                    @foreach ($products as $product)
+                    <div class="col-md-6 col-lg-4 col-xl-3">
+                        <div class="menu-card">
+                            <div class="menu-card_img">
+                                <img src="{{ getOrginalUrl($product->feature_image)}}" alt="{{ $product->title }}">
                             </div>
-                            @endforeach
-                            @endif
+                            <div class="menu-card_content">
+                                <h3 class="menu-card_title box-title"><a href="shop-details.html">{{ $product->title }}</a></h3>
+                                {{-- <p class="menu-card_text">{{ $product->title}}</p> --}}
+                                <a href="{{ route('productSingle',$product->slug) }}" class="as-btn">BROWSE PRODUCT</a>
+                            </div>
                         </div>
                     </div>
-                </div>            
+                    @endforeach
+                @endif
+            
             </div>
         </div>
     </section>
 
-
-    <!-- end of promotions and offers section -->
-
-    <!-- explore section -->
-    <section class = "explore-sc mt-4" id = "explore-sc">
-        <div class = "container">
-            <div class = "sc-title px-2">
-                <h3 class = "text-capitalize text-white">Featured Products.</h3>
-            </div>
-            <div class = "explore-sc-content">
-                <div class = "sw-cards owl-theme owl-carousel explore-slider side-slider">
-
-                    @if (isset($featured_products) && $featured_products->count() > 0)
-                        @foreach ($featured_products as $product)
-                           
-                            <div class = "sw-card bg-nero" data-aos="fade-up" data-dot="<button class = 'pgi-btn'>{{ $loop->iteration }}</button>">
-                                <div class = "sw-card-img img-cover">
-                                    <img src="{{ getOrginalUrl($product->feature_image) }}" alt="{{ $product->title }}">
+    <!--==============================Testimonial Area==============================-->
+    <section class="space bg-smoke2" id="testiSec1" >
+        <div class="container">
+            <div class="row justify-content-lg-between justify-content-center align-items-end">
+                <div class="col-lg-9 mb-n2 mb-lg-0">
+                    <div class="title-area text-center text-lg-start">
+                        <span class="sub-title">
+                          
+                            Testimonials
+                        </span>
+                        <h2 class="sec-title">Our Customer <span class="font-style text-theme">Feedbacks</span></h2>
+                        {{-- <p class="sec-text ms-auto me-auto ms-lg-0">Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.</p> --}}
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="sec-btn">
+                        <div class="icon-box">
+                            <button data-slick-prev="#testiSlide1" class="slick-arrow default"><i class="far fa-arrow-left"></i></button>
+                            <button data-slick-next="#testiSlide1" class="slick-arrow default"><i class="far fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- / Title row -->
+            <div class="row slider-shadow as-carousel" id="testiSlide1" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="1">
+               
+                @if (isset($testimonials) && count($testimonials) > 0)
+                    @foreach ($testimonials as $testimonial )
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="testi-box">
+                            <div class="testi-box_icon">
+                                <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg') }}" alt="quote">
+                            </div>
+                            <p class="testi-box_text">{!! $testimonial->description !!}</p>
+                        
+                            <div class="testi-box_profile">
+                                <div class="testi-box_avater">
+                                    <img src="{{ getOrginalUrl($testimonial->image_id)}}" alt="Avater">
                                 </div>
-                                <div class = "sw-card-body text-white">
-                                    <h6 class = "sw-card-title fw-5 text-bright-gray">{{ $product->title }}</h6>
+                                <div class="media-body">
+                                    <h3 class="testi-box_name">{{ $testimonial->name }}</h3>
                                    
-                                    <p class="sw-card-p mb-2">{{ $product->sub_title }}</p>
-                                    @if($product->highlight_specs != null)
-                                        <div class="highlight-specs">{!! $product->highlight_specs !!}</div>
-                                    @endif
-                                        
-                                    <a href="{{ route('productSingle', $product->slug) }}" class="btn btn-primary sw-card-btn mt-2 mb-2">learn
-                                        more</a>
                                 </div>
                             </div>
-                        @endforeach
-                    @endif
+                            {{-- <div class="testi-box_img">
+                                <img src="assets/img/testimonial/review_1_1.png" alt="Reveiw Image">
+                            </div> --}}
+                        </div>
+                    </div>
+                    @endforeach
+             
+               @endif
+               
+                
+
+                {{-- <div class="col-xl-4 col-lg-6">
+                    <div class="testi-box">
+                        <div class="testi-box_icon">
+                            <img src="assets/img/icon/quote_left.svg" alt="quote">
+                        </div>
+                        <p class="testi-box_text">“Synergistically strategize interdependent ROI through distinctive markets. Credibly restore one-to-one through.”</p>
+                        <div class="testi-box_review">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                        <div class="testi-box_profile">
+                            <div class="testi-box_avater">
+                                <img src="assets/img/testimonial/testi_1_2.jpg" alt="Avater">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="testi-box_name">Michel Clark</h3>
+                                <span class="testi-box_desig">DYM, USA</span>
+                            </div>
+                        </div>
+                        <div class="testi-box_img">
+                            <img src="assets/img/testimonial/review_1_2.png" alt="Reveiw Image">
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col-xl-4 col-lg-6">
+                    <div class="testi-box">
+                        <div class="testi-box_icon">
+                            <img src="assets/img/icon/quote_left.svg" alt="quote">
+                        </div>
+                        <p class="testi-box_text">“Synergistically strategize interdependent ROI through distinctive markets. Credibly restore one-to-one through.”</p>
+                        <div class="testi-box_review">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                        <div class="testi-box_profile">
+                            <div class="testi-box_avater">
+                                <img src="assets/img/testimonial/testi_1_3.jpg" alt="Avater">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="testi-box_name">Rosse Mons</h3>
+                                <span class="testi-box_desig">DO, USA</span>
+                            </div>
+                        </div>
+                        <div class="testi-box_img">
+                            <img src="assets/img/testimonial/review_1_3.png" alt="Reveiw Image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6">
+                    <div class="testi-box">
+                        <div class="testi-box_icon">
+                            <img src="assets/img/icon/quote_left.svg" alt="quote">
+                        </div>
+                        <p class="testi-box_text">“Synergistically strategize interdependent ROI through distinctive markets. Credibly restore one-to-one through.”</p>
+                        <div class="testi-box_review">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                        <div class="testi-box_profile">
+                            <div class="testi-box_avater">
+                                <img src="assets/img/testimonial/testi_1_4.jpg" alt="Avater">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="testi-box_name">Naisa Carg</h3>
+                                <span class="testi-box_desig">TO, USA</span>
+                            </div>
+                        </div>
+                        <div class="testi-box_img">
+                            <img src="assets/img/testimonial/review_1_4.png" alt="Reveiw Image">
+                        </div>
+                    </div>
+                </div> --}}
+
             </div>
         </div>
+       
     </section>
-    <!-- end of explore section -->
 
 @endsection
 

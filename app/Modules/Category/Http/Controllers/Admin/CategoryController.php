@@ -28,7 +28,7 @@ class CategoryController extends Controller
             $allcategories = $this->category->allcategories();
             return view('Category::admin.index',compact('allcategories'));
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }
@@ -49,7 +49,7 @@ class CategoryController extends Controller
             $parentcategories = $this->category->getparentcategories();
             return view('Category::admin.addCategory', compact('parentcategories', 'keywords'));
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }
@@ -62,7 +62,7 @@ class CategoryController extends Controller
             Toastr::success('Successfuly created.');
             return redirect()->back();
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }
@@ -86,7 +86,7 @@ class CategoryController extends Controller
             $parentcategories = $this->category->getparentcategories();
             return view('Category::admin.editCategory', compact('category', 'parentcategories', 'keywords'));
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }
@@ -102,7 +102,7 @@ class CategoryController extends Controller
             Toastr::error('Category edit Unsuccessfull :)', 'Error');
             return redirect()->back();
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }
@@ -118,7 +118,7 @@ class CategoryController extends Controller
                 return redirect()->back()->with('error', 'Category exists in products' . $deletedcategory . 'so cant be deleted');
             }
         } catch (\Exception $e) {
-            Toastr::success($e->getMessage(), 'Error');
+            Toastr::error($e->getMessage());
             return redirect()->back();
         }
     }

@@ -21,7 +21,7 @@
 
     </div>
 
-    <div class="col-md-6">
+    {{-- <div class="col-md-6">
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -50,10 +50,10 @@
             </div>
            
         </div>
-    </div>
+    </div> --}}
 
-    <div class="col-md-6">
-        <div class="col-md-12">
+ 
+        <div class="col-md-6">
             
             <div class="form-group">
                 <label for="featured">Is Featured <span class="text-danger">*</span></label>
@@ -66,7 +66,7 @@
             </div>
 
         </div>
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="form-group">
                 <label for="status">Status <span class="text-danger">*</span></label>
                 <select name="status" class="form-control" required>
@@ -79,8 +79,8 @@
 
         </div>
        
-    </div>
-     <div class="col-md-6">
+
+     {{-- <div class="col-md-6">
         <div class="form-group">
             <div class="custom-file-container" data-upload-id="category_logo">
                 <label>Category Feature Image<a href="javascript:void(0)" class="custom-file-container__image-clear"
@@ -110,7 +110,7 @@
                 <div class="custom-file-container__image-preview"></div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
 

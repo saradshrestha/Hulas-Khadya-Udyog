@@ -25,8 +25,8 @@ class CategoryUpdate extends FormRequest
     {
         return [
             'title' => 'required',
-            'parent' => 'not_in:' . $this->category_id,
-            'category_banner' => 'required'
+           
+           
         ];
     }
 

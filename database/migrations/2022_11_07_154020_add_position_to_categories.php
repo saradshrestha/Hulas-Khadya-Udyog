@@ -10,7 +10,7 @@ class AddPositionToCategories extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->unsignedBigInteger('category_position')->default(1)->after('status');
+            $table->unsignedBigInteger('category_position')->nullable()->default(1)->after('status');
         });
     }
 

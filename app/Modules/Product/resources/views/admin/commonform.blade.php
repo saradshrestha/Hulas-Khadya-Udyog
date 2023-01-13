@@ -37,7 +37,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="product_sku">Product SKU</label>
                                 <input type="text" name="product_sku" id="product_sku" value="{{ old('product_sku') ?? $product->sku ?? ''}}" class="form-control" placeholder="Product SKU...">
@@ -46,8 +46,26 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="category">Select Category</label>
+                                <select name="category" id="category" class="form-control " required>
+                                    @if (isset($categories) && count($categories) > 0)
+                                        <option selected disabled>Choose One...</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}" >{{ $category->title}}</option>
+                                        @endforeach
+                                    @else
+                                        <option selected disabled>Please Create Category First.</option>
+                                    @endif
+                                </select>
+                                @if ($errors->has('category'))
+                                    <div class="alert alert-danger">{{ $errors->first('category') }}</div>
+                                @endif
+                            </div>
+                        </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="is_featured">Is Featured Product ?</label>
                                 <select name="is_featured" id="is_featured" class="form-control " required>
@@ -64,7 +82,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="form-group">
                                 <label for="status">Select Status <span class="text-danger">*</span></label>
                                 <select name="status" id="status" class="form-control" required>
