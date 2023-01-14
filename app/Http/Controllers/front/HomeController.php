@@ -31,57 +31,53 @@ class HomeController extends Controller
 
     public function index()
     {
-      
         $products = Product::active()->limit(6)->latest()->get();
-        $finalProducts = FinishedProduct::limit(6)->latest()->get();
+        $recpies = FinishedProduct::limit(6)->latest()->get();
         $banners = $this->cms->getGlobalPostByID(1);
         $testimonials = Testimonial::latest()->limit(6)->get();
-        return view('front.index', compact( 'products','banners','finalProducts','testimonials'));
+        return view('front.index', compact( 'products','banners','recpies','testimonials'));
     }
 
 
     public function productSingle($slug){
        $product = Product::active()
                     ->where('slug',$slug)
-                    ->with(['seoable', 'productMeta','images'])
+                    ->with(['seoable', 'productMeta','images','finishedProducts','category'])
                     ->first();
+        $relatedProducts = Product::where('category_id',$product->category_id)
+                            ->where('id','!=',$product->id)
+                            ->with('category')->limit(8)->get();
         // dd($product);
         $categories = Category::active()->get();
-        return view('front.product.single.productDetails', compact('product'));
+        return view('front.product.single.productDetails', compact('product','relatedProducts'));
     }
 
 
     public function getProduct(Request $request){
-        $categories = Category::active()->where('parent_id',0)->orWhere('parent_id',null)->get();
+        $categories = Category::active()->get();
         $products = Product::active()->orderByPosition()->with(['seoable', 'productMeta']);
-        $offers = $this->cms->getGlobalPostByID(8);
-
+      
         if($request->ajax()){
+            // dd($request->all());
             if($request->search != null){
                 $products = $products->where('title','LIKE','%'.$request->search.'%');
             } 
             if($request->filter != null && $request->filter != "All"){
                 $category = Category::where('id',$request->filter)->first();
                 $categoryId = $category->id;
-                if($category->has('children') && $category->children()->count() > 0){
-                    $products = Product::whereHas('category', function($q) use ($categoryId){
-                        $q->where('parent_id',$categoryId);
-                    });
-                }else{  
-                    $products = $products->where('category_id',$categoryId);
-                }
+                $products = $products->where('category_id',$categoryId);
             }  
-            $products = $products->paginate(12);
+            $products = $products->paginate(1);
             $data = [
                 'view' => view('front.product.products.productsappend',compact('products'))->render(),
             ];
             return $this->response->responseSuccess($data,"Success",200); 
 
         }else{
-            $products = $products->paginate(12);
+            $products = $products->paginate(1);
         }
 
-        return view('front.product.products.products', compact('products','categories','offers'));
+        return view('front.product.products.products', compact('products','categories'));
     }
 
 

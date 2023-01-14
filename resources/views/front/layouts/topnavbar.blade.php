@@ -83,8 +83,11 @@ Mobile Menu
                 <li><a href="{{ route('aboutus') }}">About Us</a></li>
                
                 <li>
-                    <a href="#">Shop</a>
+                    <a href="{{ route('products')}}">Products</a>
                     
+                </li>
+                <li>
+                    <a href="{{ route('products')}}">Recipes</a>
                 </li>
                 {{-- <li class="menu-item-has-children mega-menu-wrap">
                     <a href="#">Pages</a>
@@ -191,7 +194,11 @@ Header Area
                                 <li><a href="{{ route('aboutus')}}">About Us</a></li>
                               
                                 <li>
-                                    <a href="#">Shop</a>
+                                    <a href="{{ route('products')}}">Products</a>
+                                    
+                                </li>
+                                <li>
+                                    <a href="{{ route('products')}}">Recipes</a>
                                 </li>
                                 {{-- <li class="menu-item-has-children mega-menu-wrap">
                                     <a href="#">Pages</a>
