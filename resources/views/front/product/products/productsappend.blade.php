@@ -21,7 +21,7 @@
 <h4><center>No Products Found<center></h4>
 @endif
 </div>
-<div class="d-flex justify-content-center mt-4">
+<div class="mt-4">
     {{ $products->links('vendor.pagination.ajax') }}
 </div>
 

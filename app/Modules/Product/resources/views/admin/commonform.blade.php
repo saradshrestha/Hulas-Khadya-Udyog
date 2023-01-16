@@ -54,7 +54,7 @@
                                     @if (isset($categories) && count($categories) > 0)
                                         <option selected disabled>Choose One...</option>
                                         @foreach ($categories as $category)
-                                            <option value="{{ $category->id }}" {{ (old('category') ?? $product->category_id) == $category->id  ? 'selected' : '' }} 
+                                            <option value="{{ $category->id }}" {{ (old('category') ?? (isset($product) ? $product->category_id : '')) == $category->id  ? 'selected' : '' }} 
                                                 >{{ $category->title }}</option>
                                         @endforeach
                                     @else
@@ -102,8 +102,22 @@
 
                         </div>
                        
+                        
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {!! Form::label('price', 'Product Price') !!}
+                                {!! Form::number('price', old('price') ?? ($product->price ?? ''), [
+                                    'class' => 'form-control',
+                                    'placeholder' => 'Product Price...',
+                                    'required' => 'required',
+                                ]) !!}
+                                @if ($errors->has('price'))
+                                    <div class="alert alert-danger">{{ $errors->first('price') }}</div>
+                                @endif
+                            </div>
+                        </div>
 
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 {!! Form::label('purchase_link', 'Product Purchase Link (Daraz)') !!}
                                 {!! Form::text('purchase_link', old('purchase_link') ?? ($product->purchase_link ?? ''), [

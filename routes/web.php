@@ -124,6 +124,15 @@ Route::group(
 
         Route::get('/product/{slug}', 'HomeController@productSingle')->name('productSingle');
 
+
+        
+        Route::get('/recipes', 'HomeController@getRecipe')->name('recipes');
+
+        Route::get('/recipe/filter/{id}','HomeController@recipeFilter')->name('recipeFilter');
+
+        Route::get('/recipe/{slug}', 'HomeController@recipeSingle')->name('recipeSingle');
+        
+
         Route::get('/category/{slug}/products', 'HomeController@productsByCategory')->name('productsByCategory');
 
         Route::get('/contact-us', 'HomeController@getContact')->name('contact');

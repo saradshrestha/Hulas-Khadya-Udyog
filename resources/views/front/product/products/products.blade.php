@@ -1,8 +1,39 @@
 @extends('front.layouts.master')
 @section('pageTitle', 'Products | ' . getSiteSetting('site_title'))
-@push('styles')
+<style>
+    .pagination .page-link {
+        color: #000000;
+        background-color: #e9ecef;
+    }
+    .pagination .page-item.active .page-link{
+        background-color: #eb0029;
+        border-color: #eb0029;
+    }
+    .pagination .page-item .page-link:hover{
+        background-color: #eb0029;
+        border-color: #eb0029;
+        color: #e9ecef;
+    }
 
-@endpush
+    .pagination .page-item.disabled .page-link {
+    
+        pointer-events: none;
+        color: #000000;
+        background-color: #e9ecef;
+    }
+
+    .pagination .page-item .page-link{
+        display: inline;
+        position: relative;
+        z-index: 1;
+        margin-right: 10px;
+        border-radius: 7px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+   }
+   
+</style>
 
 {{-- @section('banner')
     @include('front.product.products.productsbanner')

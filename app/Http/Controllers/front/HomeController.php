@@ -67,18 +67,65 @@ class HomeController extends Controller
                 $categoryId = $category->id;
                 $products = $products->where('category_id',$categoryId);
             }  
-            $products = $products->paginate(1);
+            $products = $products->paginate(8);
             $data = [
                 'view' => view('front.product.products.productsappend',compact('products'))->render(),
             ];
             return $this->response->responseSuccess($data,"Success",200); 
 
         }else{
-            $products = $products->paginate(1);
+            $products = $products->paginate(8);
         }
 
         return view('front.product.products.products', compact('products','categories'));
     }
+
+    public function recipeSingle($slug){
+        $recipe = FinishedProduct::where('slug',$slug)
+                     ->with(['seoable','products'])
+                     ->first();
+        $recipe_id = $recipe->id;
+        $recentRecipes = FinishedProduct::where('id','!=',$recipe_id)
+                                            ->limit(6)->get();  
+        $productIds =  $recipe->products()->pluck('product_id')->toArray();
+        $relatedProducts = FinishedProduct::whereHas('products', function($q) use ($productIds){
+                            $q->whereIn('product_id',$productIds);
+                        })
+                        ->with('products')
+                        ->where('id','!=',$recipe_id)
+                        ->limit(8)->get();
+
+
+         return view('front.recipe.single.recipeDetails', compact('recipe','recentRecipes','relatedProducts'));
+     }
+ 
+ 
+     public function getRecipe(Request $request){
+         $categories = Category::active()->get();
+         $recipes = FinishedProduct::with(['seoable','products']);
+       
+         if($request->ajax()){
+    
+             if($request->search != null){
+                 $recipe = $recipes->where('title','LIKE','%'.$request->search.'%');
+             } 
+             if($request->filter != null && $request->filter != "All"){
+                 $category = Category::where('id',$request->filter)->first();
+                 $categoryId = $category->id;
+                 $recipes = $recipe->where('category_id',$categoryId);
+             }  
+             $recipes = $recipes->paginate(2);
+             $data = [
+                 'view' => view('front.recipe.recipe.recipesappend',compact('recipes'))->render(),
+             ];
+             return $this->response->responseSuccess($data,"Success",200); 
+ 
+         }else{
+             $recipes = $recipes->paginate(2);
+         }
+ 
+         return view('front.recipe.recipe.recipes', compact('recipes'));
+     }
 
 
 

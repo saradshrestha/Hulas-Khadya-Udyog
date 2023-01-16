@@ -80,14 +80,14 @@ Mobile Menu
                 <li>
                     <a href="{{ route('index') }}">Home</a>
                 </li>
-                <li><a href="{{ route('aboutus') }}">About Us</a></li>
+                {{-- <li><a href="{{ route('aboutus') }}">About Us</a></li> --}}
                
                 <li>
                     <a href="{{ route('products')}}">Products</a>
                     
                 </li>
                 <li>
-                    <a href="{{ route('products')}}">Recipes</a>
+                    <a href="{{ route('recipes')}}">Recipes</a>
                 </li>
                 {{-- <li class="menu-item-has-children mega-menu-wrap">
                     <a href="#">Pages</a>
@@ -138,9 +138,9 @@ Mobile Menu
                         <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
                 </li> --}}
-                <li>
+                {{-- <li>
                     <a href="{{ route('contact') }}">Contact Us</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>
@@ -198,7 +198,7 @@ Header Area
                                     
                                 </li>
                                 <li>
-                                    <a href="{{ route('products')}}">Recipes</a>
+                                    <a href="{{ route('recipes')}}">Recipes</a>
                                 </li>
                                 {{-- <li class="menu-item-has-children mega-menu-wrap">
                                     <a href="#">Pages</a>

@@ -24,8 +24,9 @@
                         <div class="menu-all-pages-container">
                             <ul class="menu">
                                 <li><a href="{{ route('aboutus') }}">About Us</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="project.html">Testimonial</a></li>
+                                <li><a href="{{ route('products') }}">Products</a></li>
+                                <li><a href="{{ route('recipes') }}">Recipes</a></li>
+                                <li><a href="{{route('index')}}#testimonial">Testimonial</a></li>
                                 <li><a href="{{ route('contact')}}">Contact Us</a></li>
                             </ul>
                         </div>
@@ -70,13 +71,13 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a href="https://themeforest.net/user/angfuz_soft">Angfuzsoft</a>. All Rights Reserved.</p>
+                    <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a href="https://an4soft.com">An4soft</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 text-end d-none d-lg-block">
                     <div class="footer-links">
                         <ul>
-                            <li><a href="about.html">Privacy Policy</a></li>
-                            <li><a href="about.html">Terms & Condition</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
                         </ul>
                     </div>
                 </div>

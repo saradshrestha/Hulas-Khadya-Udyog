@@ -63,6 +63,7 @@ class ProductRepository implements ProductInterface {
         // dd($request->all());
         $product = new Product();
         $product->title = $request->title;
+        $product->price = $request->price;
         $product->sku = $request->product_sku;
         $product->sub_title = $request->sub_title;
         $product->status = $request->status;
@@ -109,6 +110,7 @@ class ProductRepository implements ProductInterface {
         // dd($request->all());
         $product = Product::where('slug',$slug)->first();
         $product->title = $request->title;
+        $product->price = $request->price;
         $product->sku = $request->product_sku;
         $product->sub_title = $request->sub_title;
         $product->status = $request->status;

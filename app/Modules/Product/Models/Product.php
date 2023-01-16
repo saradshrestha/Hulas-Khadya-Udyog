@@ -18,7 +18,7 @@ class Product extends Model
             'feature_image', 'user_id',
             'category_id', 'highlights',
             'specification','product_position',
-            'user_id','purchase_link','is_featured'
+            'user_id','purchase_link','is_featured','price'
     ];
 
     protected static function boot()

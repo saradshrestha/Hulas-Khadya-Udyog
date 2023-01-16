@@ -24,9 +24,7 @@
 </div>
 
 
-  <!--==============================
-    Product Details
-    ==============================-->
+  <!--==============================Product Details==============================-->
     <section class="as-product-wrapper product-details space-top space-extra-bottom">
         <div class="container">
             <div class="row">
@@ -123,10 +121,6 @@
                                         </div>
                                     </li>
                                     @endforeach
-                               
-
-                              
-                               
                             </ul>
                             @else
                             <h6 class="text-center">Recipe Not Avaliable Yet. Will Be Avaliable Soon.</h6>

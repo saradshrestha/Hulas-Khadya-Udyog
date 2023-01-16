@@ -16,6 +16,7 @@
     <script src="{{ asset('frontendFiles/assets/js/jquery.counterup.min.js') }}"></script>
     <!-- Isotope Filter -->
     <script src="{{ asset('frontendFiles/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+
     <script src="{{ asset('frontendFiles/assets/js/imagesloaded.pkgd.min.js') }}"></script>
     <!-- Main Js File -->
     <script src="{{ asset('frontendFiles/assets/js/main.js')}}"></script>
@@ -23,6 +24,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 
 <script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
+
 {!! Toastr::message() !!}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -30,7 +32,7 @@
 <script>
     function loader() {
        $.blockUI({
-           message: '<div class="spinner-border"><span class="sr-only">Loading...</span> </div>',
+           message: '<div class="preloader "><button class="as-btn style3 preloaderCls">Cancel Preloader </button><div class="preloader-inner"> <span class="loader"></span></div></div>',
            fadeIn: 100,
            timeout: 1000, //unblock after 2 seconds
            overlayCSS: {

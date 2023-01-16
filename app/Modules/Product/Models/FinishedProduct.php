@@ -24,7 +24,7 @@ class FinishedProduct extends Model
     }
     
     public function products(){
-        return $this->belongsToMany(Product::class,'product_recpies');
+        return $this->belongsToMany(Product::class,'product_recpies','finished_product_id','product_id');
     }
 
     public function seoable()
