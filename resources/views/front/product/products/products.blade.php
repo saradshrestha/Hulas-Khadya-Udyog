@@ -68,77 +68,15 @@
                         
                     @endif
 
-                    {{-- <div class="button-group category-btns filter-button-group px-3">
-                        <button class="category-btn filterService category-btn-active" data-id="All">All</button>
-    
-                        @if (isset($categories) && $categories->count() > 0)
-                            @foreach ($categories as $category)
-                                <button class="category-btn filterService"
-                                    data-id="{{ $category->id }}">{{ $category->title }}</button>
-                            @endforeach
-                        @else
-                        @endif
-                    </div> --}}
                 </div>
             </div>
             <div class="appendProduct">
-           
-                
-                    @include('front.product.products.productsappend')
+                @include('front.product.products.productsappend')
 
-                </div>
-            <div class="as-pagination text-center pt-50">
-               
             </div>
         </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-    {{-- <section class="category-sc pb-3" id="category-sc">
-        <div class="container px-0">
-            <div class="sc-title px-3 d-md-flex align-items-center justify-content-between">
-                <h3 class="text-capitalize text-white mb-4 mb-md-0 no-wrap">product category</h3>
-      
-                <div class="input-group ps-lg-3">
-                    <span class="input-group-text">
-                        <lord-icon src="https://cdn.lordicon.com/pvbutfdk.json" trigger="hover" colors="primary:#eaeaea"
-                            style="width:25px;height:25px">
-                        </lord-icon>
-                    </span>
-                    <input type="text" name="search" class="form-control productSearch" value="{{ old('search') }}"
-                        placeholder="Search">
-                </div>
-            
-            </div>
-            <div class="category-sc-content mt-4 mt-md-0">
-                <div class="button-group category-btns filter-button-group px-3">
-                    <button class="category-btn filterService category-btn-active" data-id="All">All</button>
-
-                    @if (isset($categories) && $categories->count() > 0)
-                        @foreach ($categories as $category)
-                            <button class="category-btn filterService"
-                                data-id="{{ $category->id }}">{{ $category->title }}</button>
-                        @endforeach
-                    @else
-                    @endif
-                </div>
-                <div class="appendProduct">
-
-                    @include('front.product.products.productsappend')
-
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
 @endsection
 

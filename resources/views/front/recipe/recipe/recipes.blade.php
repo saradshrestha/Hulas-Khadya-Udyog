@@ -61,63 +61,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-xxl-8 col-lg-7">
-
                     <div class="appendProduct">
-           
-                
                         @include('front.recipe.recipe.recipesappend')
-    
                     </div>
-                  
-
-                   
-                    {{-- <div class="as-pagination ">
-                        <ul>
-                            <li><a href="blog.html">1</a></li>
-                            <li><a href="blog.html">2</a></li>
-                            <li><a href="blog.html">3</a></li>
-                            <li><a href="blog.html"><i class="far fa-arrow-right"></i></a></li>
-                        </ul>
-                    </div> --}}
                 </div>
                 <div class="col-xxl-4 col-lg-5">
                     <aside class="sidebar-area">
                         <div class="widget widget_search">
                             <form class="search-form">
-                                <input type="text" placeholder="Search...">
+                                <input type="text" class="productSearch" name="search" value="{{ old('search') }}" placeholder="Search...">
                                 <button type="submit"><i class="far fa-search"></i></button>
                             </form>
                         </div>
-                        <div class="widget widget_categories  ">
-                            <h3 class="widget_title">Products</h3>
-                            <ul>
-                                <li>
-                                    <img class="icon" src="assets/img/icon/category_1_1.svg" alt="icon">
-                                    <a href="blog.html">Burger</a>
-                                    <span>10</span>
-                                </li>
-                                <li>
-                                    <img class="icon" src="assets/img/icon/category_1_2.svg" alt="icon">
-                                    <a href="blog.html">Pizza</a>
-                                    <span>08</span>
-                                </li>
-                                <li>
-                                    <img class="icon" src="assets/img/icon/category_1_3.svg" alt="icon">
-                                    <a href="blog.html">Combo</a>
-                                    <span>15</span>
-                                </li>
-                                <li>
-                                    <img class="icon" src="assets/img/icon/category_1_4.svg" alt="icon">
-                                    <a href="blog.html">Chicken</a>
-                                    <span>14</span>
-                                </li>
-                                <li>
-                                    <img class="icon" src="assets/img/icon/category_1_5.svg" alt="icon">
-                                    <a href="blog.html">Drinks</a>
-                                    <span>12</span>
-                                </li>
-                            </ul>
-                        </div>
+                     
                         {{-- <div class="widget  ">
                             <div class="author-widget-wrap">
                                 <div class="avater">
@@ -304,8 +260,7 @@
             e.preventDefault();
             var url = "{{ route('recipes') }}";
             var search = $(this).val();
-            var filter = $('.active').data('id');
-
+           
             clearTimeout(keyupTimer);
             keyupTimer = setTimeout(function() {
                 // alert(search);
@@ -314,7 +269,6 @@
                     url: url,
                     data: {
                         search: search,
-                        filter: filter
                     },
                     beforeSend: function(data) {
                         loader();

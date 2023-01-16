@@ -101,31 +101,31 @@ class HomeController extends Controller
  
  
      public function getRecipe(Request $request){
-         $categories = Category::active()->get();
-         $recipes = FinishedProduct::with(['seoable','products']);
+        $categories = Category::active()->get();
+        $recipes = FinishedProduct::with(['seoable','products']);
        
-         if($request->ajax()){
-    
-             if($request->search != null){
-                 $recipe = $recipes->where('title','LIKE','%'.$request->search.'%');
-             } 
-             if($request->filter != null && $request->filter != "All"){
-                 $category = Category::where('id',$request->filter)->first();
-                 $categoryId = $category->id;
-                 $recipes = $recipe->where('category_id',$categoryId);
-             }  
-             $recipes = $recipes->paginate(2);
-             $data = [
-                 'view' => view('front.recipe.recipe.recipesappend',compact('recipes'))->render(),
-             ];
-             return $this->response->responseSuccess($data,"Success",200); 
- 
-         }else{
-             $recipes = $recipes->paginate(2);
-         }
- 
-         return view('front.recipe.recipe.recipes', compact('recipes'));
-     }
+        if($request->ajax()){
+
+            if($request->search != null){
+                $recipe = $recipes->where('title','LIKE','%'.$request->search.'%');
+            } 
+            if($request->filter != null && $request->filter != "All"){
+                $category = Category::where('id',$request->filter)->first();
+                $categoryId = $category->id;
+                $recipes = $recipe->where('category_id',$categoryId);
+            }  
+            $recipes = $recipes->paginate(2);
+            $data = [
+                'view' => view('front.recipe.recipe.recipesappend',compact('recipes'))->render(),
+            ];
+            return $this->response->responseSuccess($data,"Success",200); 
+
+        }else{
+            $recipes = $recipes->paginate(2);
+        }
+
+        return view('front.recipe.recipe.recipes', compact('recipes'));
+    }
 
 
 
