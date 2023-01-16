@@ -57,8 +57,8 @@
                                     <i class="fal fa-envelope"></i>
                                 </div>
                                 <p class="info-box_text">
-                                    <a href="mailto:info@pizzer.com" class="info-box_link">{{ returnSiteSetting('primary_email')}}</a>
-                                    <a href="mailto:info.example@pizzer.com" class="info-box_link">{{ returnSiteSetting('secondary_email')}}</a>
+                                    <a href="mailto:{{ returnSiteSetting('primary_email')}}" class="info-box_link">{{ returnSiteSetting('primary_email')}}</a>
+                                    <a href="mailto:{{ returnSiteSetting('secondary_email')}}" class="info-box_link">{{ returnSiteSetting('secondary_email')}}</a>
                                 </p>
                             </div>
                         </div>
