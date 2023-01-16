@@ -84,9 +84,29 @@
                 </ul>
             </li>
 
+            <li class="menu">
+                <a href="#team" data-active="{{ (Request::routeIs('admin.team*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="fas fa-users"></i>
+                        {{-- <i class="fab fa-product-hunt"></i> --}}
+                        <span>Teams</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled {{ (Request::routeIs('admin.team*')) ? 'show' : ''}}" id="team" data-parent="#accordionExample">
+                    <li class="{{ (Request::routeIs('admin.team.index')) ? 'active' : ''}}">
+                        <a href="{{ route('admin.team.index')}}"> All Teams </a>
+                    </li>
+                    <li class="{{ (Request::routeIs('admin.team.create')) ? 'active' : ''}}">
+                        <a href="{{ route('admin.team.create') }}"> Add New Member </a>
+                    </li>
+                </ul>
+            </li>
 
             <li class="menu">
-                <a href="#testimonial" data-active="{{ (Request::routeIs('admin.finishedProduct*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a href="#testimonial" data-active="{{ (Request::routeIs('admin.testimonial*')) ? 'true' : ''}}" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
                         <i class="fas fa-users"></i>
                         {{-- <i class="fab fa-product-hunt"></i> --}}

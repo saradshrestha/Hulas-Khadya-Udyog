@@ -48,8 +48,8 @@
             "Category\\": "app/Modules/Category",
             "Files\\": "app/Modules/Files",
             "Product\\": "app/Modules/Product",
-            "Testimonial\\": "app/Modules/Testimonial"
-
+            "Testimonial\\": "app/Modules/Testimonial",
+            "Team\\": "app/Modules/Team"
         },
         "files": [
             "app/image.php",

@@ -48,6 +48,7 @@
     44 => 'Category\\Providers\\CategoryServiceProvider',
     45 => 'Files\\Providers\\FilesServiceProvider',
     46 => 'Testimonial\\Providers\\TestimonialServiceProvider',
+    47 => 'Team\\Providers\\TeamServiceProvider',
   ),
   'eager' => 
   array (
@@ -83,6 +84,7 @@
     29 => 'Category\\Providers\\CategoryServiceProvider',
     30 => 'Files\\Providers\\FilesServiceProvider',
     31 => 'Testimonial\\Providers\\TestimonialServiceProvider',
+    32 => 'Team\\Providers\\TeamServiceProvider',
   ),
   'deferred' => 
   array (

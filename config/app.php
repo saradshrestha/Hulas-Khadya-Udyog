@@ -1,5 +1,6 @@
 <?php
 
+use Team\Providers\TeamServiceProvider;
 
 return [
 
@@ -183,7 +184,9 @@ return [
         Product\Providers\ProductServiceProvider::class,
         Category\Providers\CategoryServiceProvider::class,
         Files\Providers\FilesServiceProvider::class,
-        Testimonial\Providers\TestimonialServiceProvider::class
+        Testimonial\Providers\TestimonialServiceProvider::class,
+        TeamServiceProvider::class
+        
       
         
     ],
