@@ -788,7 +788,7 @@ Hero Area
 </section>
 
 <!--==============================Offer Area ==============================-->
-<section class="space position-relative" data-bg-src="{{ asset('frontendFiles/assets/img/bg/offer_banner_1.jpg')}}">
+{{-- <section class="space position-relative" data-bg-src="{{ asset('frontendFiles/assets/img/bg/offer_banner_1.jpg')}}">
     <div class="container">
         <div class="row gy-30">
             <div class="col-md-1">
@@ -826,7 +826,7 @@ Hero Area
             <p class="small-text2">CASH PRIZE</p>
         </div>
     </div>
-</section>
+</section> --}}
 <!--==============================About Area  ==============================-->
 <div class="space-top">
     <div class="container">

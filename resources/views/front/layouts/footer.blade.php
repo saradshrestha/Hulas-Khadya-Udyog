@@ -73,14 +73,7 @@
                 <div class="col-lg-6">
                     <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a href="https://an4soft.com">An4soft</a>. All Rights Reserved.</p>
                 </div>
-                <div class="col-lg-6 text-end d-none d-lg-block">
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                        </ul>
-                    </div>
-                </div>
+                http://localhost:8000/frontendFiles/assets/img/normal/why_1_2.png --}}
             </div>
         </div>
     </div>
