@@ -1,6 +1,29 @@
 
 
  <footer class="footer-wrapper footer-layout1">
+    {{-- <div class="container">
+        <div class="footer-top">
+            <div class="row align-items-center">
+                <div class="col-xl-3">
+                    <div class="footer-logo">
+                        <img src="{{ asset('frontendFiles/assets/img/logo-white.svg')}}" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-xl-9">
+                    <div class="subscribe-box">
+                        <div>
+                            <h2 class="subscribe-box_title">Subscription News</h2>
+                            <p class="subscribe-box_text">Subscribe to the weekly newsletter for latest updates.</p>
+                        </div>
+                        <form class="newsletter-form">
+                            <input class="form-control" type="email" placeholder="Enter Email Address" required="">
+                            <button type="submit" class="as-btn style3">SUBCRIBE<i class="fas fa-arrow-right ms-2"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> --}}
     <div class="widget-area">
         <div class="container">
             <div class="row justify-content-between">
@@ -73,7 +96,14 @@
                 <div class="col-lg-6">
                     <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2022 <a href="https://an4soft.com">An4soft</a>. All Rights Reserved.</p>
                 </div>
-                http://localhost:8000/frontendFiles/assets/img/normal/why_1_2.png --}}
+                {{-- <div class="col-lg-6 text-end d-none d-lg-block">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </div>

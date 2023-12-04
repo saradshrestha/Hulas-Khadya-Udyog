@@ -46,20 +46,20 @@
                 <div class="form-group">
                     <label for="status">Position <span class="text-danger">*</span></label>
                     <input type="number" min="1" class="form-control"
-                        value="{{ $team->position ?? old('position') }}" name="position" placeholder="Position...">
+                        value="{{ $team->position ?? old('position') }}" name="position" placeholder="Example : 1 O r 2">
 
                 </div>
             </div>
 
-            <div class="col-md-12">
+            {{-- <div class="col-md-12">
                 <div class="form-group">
                     <label for="fb_link">Facebook Link <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" value="{{ $team->fb_link ?? old('fb_link') }}"
                         name="fb_link" placeholder="Facebook link...">
 
                 </div>
-            </div>
-            <div class="col-md-12">
+            </div> --}}
+            {{-- <div class="col-md-12">
                 <div class="form-group">
                     <label for="insta_link">Instagram Link <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" value="{{ $team->insta_link ?? old('insta_link') }}"
@@ -74,7 +74,7 @@
                         name="twitter_link" placeholder="Twitter Link...">
 
                 </div>
-            </div>
+            </div> --}}
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="linkedin_link">Linked In Link <span class="text-danger">*</span></label>

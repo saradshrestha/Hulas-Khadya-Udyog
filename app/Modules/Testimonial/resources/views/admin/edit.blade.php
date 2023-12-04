@@ -71,7 +71,21 @@
             var SecondUpload = new FileUploadWithPreview('image');
         @endif
 
+
+        @if ($testimonial->company_logo != null)
+            var importedBaseImage2 = "{{ getOrginalUrl($testimonial->company_logo) }}"
+            var SecondUpload = new FileUploadWithPreview('company_logo', {
+            images: {
+            baseImage: importedBaseImage2,
+            },
+            })
+        @else
+            var SecondUpload = new FileUploadWithPreview('company_logo');
+        @endif
+
     
+        
+
         
         
         $(".tagging").select2({

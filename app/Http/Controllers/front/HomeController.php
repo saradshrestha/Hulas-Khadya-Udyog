@@ -17,6 +17,7 @@ use Files\Repositories\FileInterface;
 use Illuminate\Http\Request;
 use Product\Models\FinishedProduct;
 use Product\Models\Product;
+use Team\Models\Team;
 use Testimonial\Models\Testimonial;
 
 class HomeController extends Controller
@@ -32,10 +33,11 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::active()->limit(6)->latest()->get();
-        $recpies = FinishedProduct::limit(6)->latest()->get();
+        $recipes = FinishedProduct::limit(6)->latest()->get();
         $banners = $this->cms->getGlobalPostByID(1);
         $testimonials = Testimonial::latest()->limit(6)->get();
-        return view('front.index', compact( 'products','banners','recpies','testimonials'));
+        $teams = Team::orderBy('position','ASC')->get();
+        return view('front.index', compact( 'products','banners','recipes','testimonials','teams'));
     }
 
 
@@ -259,8 +261,9 @@ class HomeController extends Controller
 
 
     public function aboutUs(){
-        $brandStrategies = $this->cms->getGlobalPostByID(4,5);
-        return view('front.about.about', compact('brandStrategies'));
+        $testimonials = Testimonial::latest()->limit(6)->get();
+        $teams = Team::orderBy('position','ASC')->get();
+        return view('front.about.about', compact('testimonials','teams'));
     }
 
     public function privacyPolicy(){

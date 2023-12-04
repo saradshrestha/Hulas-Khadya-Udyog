@@ -59,13 +59,13 @@
         </div> --}}
     </div>
 </div>
-<div class="popup-search-box d-none d-lg-block">
+{{-- <div class="popup-search-box d-none d-lg-block">
     <button class="searchClose"><i class="fal fa-times"></i></button>
     <form action="#">
         <input type="text" placeholder="What are you looking for?">
         <button type="submit"><i class="fal fa-search"></i></button>
     </form>
-</div>
+</div> --}}
 <!--==============================
 Mobile Menu
 ============================== -->
@@ -138,9 +138,12 @@ Mobile Menu
                         <li><a href="blog-details.html">Blog Details</a></li>
                     </ul>
                 </li> --}}
-                {{-- <li>
+                <li>
                     <a href="{{ route('contact') }}">Contact Us</a>
-                </li> --}}
+                </li>
+                <li>
+                    <a href="#">Careers</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -149,7 +152,7 @@ Mobile Menu
 Header Area
 ==============================-->
 <header class="as-header header-layout1">
-    <div class="header-top">
+    {{-- <div class="header-top">
         <div class="container as-container">
             <div class="header-top-inner">
                 <div class="row justify-content-center justify-content-md-between align-items-center gy-2">
@@ -174,7 +177,7 @@ Header Area
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- Main Menu Area -->
     <div class="menu-area">
         <div class="container as-container">
@@ -182,7 +185,9 @@ Header Area
                 <div class="col-xl-auto">
                     <div class="d-flex align-items-center justify-content-between">
                         <div class="logo-style1">
-                            <a href="{{ route('index') }}"><img style="width:180px;height:auto;" src="{{ asset(returnSiteSetting('logo')) ?? asset('frontendFiles/assets/img/logo.svg') }}" alt="LOGO"></a>
+                            <a href="{{ route('index') }}">
+                                <img style="width:180px;height:auto;" src="{{ asset(returnSiteSetting('logo')) ?? asset('frontendFiles/assets/img/logo.svg') }}" alt="LOGO">
+                            </a>
 
                         </div>
                         <nav class="main-menu d-none d-lg-inline-block">
@@ -251,6 +256,9 @@ Header Area
                                 </li> --}}
                                 <li>
                                     <a href="{{ route('contact') }}">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Careers</a>
                                 </li>
                             </ul>
                         </nav>

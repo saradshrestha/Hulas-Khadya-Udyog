@@ -15,6 +15,9 @@ class Testimonial extends Model
         'status',
         'image_id',
         'description',
+        'address',
+        'company_name',
+        'company_logo',
     ];
 
 

@@ -32,13 +32,13 @@
 </head>
 
 <body>
-       <!--============================== Preloader ==============================-->
-    <div class="preloader ">
+    
+    {{-- <div class="preloader ">
         <button class="as-btn style3 preloaderCls">Cancel Preloader </button>
         <div class="preloader-inner">
             <span class="loader"></span>
         </div>
-    </div>
+    </div> --}}
 
    
     @include('front.layouts.topnavbar')

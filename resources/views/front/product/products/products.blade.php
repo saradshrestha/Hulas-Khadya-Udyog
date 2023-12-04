@@ -169,7 +169,7 @@
                     search: search
                 },
                 beforeSend: function(data) {
-                    loader();
+                    // loader();
                 },
                 success: function(data) {
                 console.log(data);

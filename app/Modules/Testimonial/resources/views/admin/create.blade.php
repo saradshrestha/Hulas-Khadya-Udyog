@@ -50,6 +50,11 @@
     <script>
         var firstUpload = new FileUploadWithPreview('image');
 
+        var secondUpload = new FileUploadWithPreview('company_logo');
+
+
+
+
       
 
         

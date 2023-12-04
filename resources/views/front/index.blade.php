@@ -437,21 +437,28 @@ Hero Area
             <p class="sec-text ms-auto me-auto">Agrim foods is dedicated to building healthy communities through the production of tasty, healthy, and satisfying food that is both accessible and affordable.</p>
         </div>
         <div class="row as-carousel slider-shadow number-dots" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
+            @if (isset($products) && count($products)>0)
+            @foreach ($products as $product)
 
             <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="menu-card">
                     <div class="menu-card_img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_1.png')}}" alt="Menu Image">
+                        <img src="{{ getOrginalUrl($product->feature_image)}}" alt="{{ $product->title }}">
+
                     </div>
-                    <div class="menu-card_content">
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Chakki Atta</a></h3>
-                        <p class="menu-card_text">Premium Agrim Chakki Atta, whole wheat flour from Western Nepal.</p>
-                        <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
+                    <div class="menu-card_content mt-1">
+                        <a href="#" class="category mt-1">{{ $product->category->title ?? ''}}</a>
+
+                        {{-- <h6 class="menu-card_title box-title"><a href="shop-details.html">{{ $product->category->title}}</a></h6> --}}
+                        <h3 class="menu-card_title box-title"><a href="shop-details.html">{{ $product->title}}</a></h3>
+                        <p class="menu-card_text">Rs. {{ $product->price  ?? ''}}</p>
+                        <a href="{{ route('productSingle',$product->slug)}}" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3">
+            @endforeach
+            @endif
+            {{-- <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="menu-card">
                     <div class="menu-card_img">
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Menu Image">
@@ -501,7 +508,7 @@ Hero Area
                         <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
@@ -555,7 +562,7 @@ Hero Area
                     </div>
                 </div>
                 <div class="btn-wrap">
-                    <a href="shop.html" class="as-btn style3">BROWSE PRODUCTS</a>
+                    <a href="{{ route('products') }}" class="as-btn style3">BROWSE PRODUCTS</a>
                     <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video-btn popup-video">
                         <div class="play-btn"><i class="fas fa-play"></i></div>
                         <span class="btn-text">Watch CSR Project</span>
@@ -566,7 +573,7 @@ Hero Area
     </div>
 </div>
 <!--==============================Product Area  ==============================-->
-<section class="space">
+{{-- <section class="space">
     <div class="container">
         <div class="title-area text-center">
             <span class="sub-title">
@@ -575,14 +582,7 @@ Hero Area
             </span>
             <h2 class="sec-title">Our Popular Agrim <span class="font-style text-theme">Brands</span></h2>
             <p class="sec-text ms-auto me-auto">Whether you are looking for breakfast cereals, snacks, or meals, Agrim Foods has a product that will suit your needs and preferences.</p>
-            {{-- <div class="tab-menu1 filter-menu-active">
-                <button data-filter="*" class="active" type="button">All Products</button>
-                <button data-filter=".cat1" type="button">Agrim Rice</button>
-                <button data-filter=".cat2" type="button">Agrim Flour</button>
-                <button data-filter=".cat3" type="button">Agrim Pulses</button>
-                <button data-filter=".cat4" type="button">Agrim Chiura</button>
-                <button data-filter=".cat5" type="button">Agrim Poha</button>
-            </div> --}}
+          
         </div>
         <div class="row gy-40 filter-active">
 
@@ -785,7 +785,7 @@ Hero Area
     <div class="shape-mockup chili jump-reverse" data-top="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/red_chili.png')}}" alt="shape"></div>
     <div class="shape-mockup leaf jump-reverse" data-top="20%" data-left="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_1.png')}}" alt="shape"></div>
     <div class="shape-mockup leaf jump" data-bottom="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_2.png')}}" alt="shape"></div>
-</section>
+</section> --}}
 
 <!--==============================Offer Area ==============================-->
 {{-- <section class="space position-relative" data-bg-src="{{ asset('frontendFiles/assets/img/bg/offer_banner_1.jpg')}}">
@@ -836,26 +836,20 @@ Hero Area
                     <div class="title-area mb-30">
                         <span class="sub-title">
                             <img class="icon" src="{{ asset('frontendFiles/assets/img/icon/wheat.png')}}" alt="icon">
-                            Download App
+                            Dealership
                         </span>
-                        <h2 class="sec-title">Best App For Agrim Foods <span class="font-style text-theme">Merchants</span></h2>
+                        <h2 class="sec-title">Join Us for <span class="font-style text-theme">Dealership</span></h2>
                     </div>
-                    <p class="mt-n2 mb-4">We are committed to giving our dealers the most value by providing easy-to-achieve sales targets through our sales target app, which includes the best offers and incentives.</p>
+                    <p class="mt-n2 mb-4">We are committed to giving our dealers the most value by providing easy-to-achieve sales targets, which includes the best offers and incentives.</p>
                     <div class="download-btn-wrap">
-                        <a target="_blank" href="https://play.google.com/" class="download-btn">
+                        <a target="_blank" href="{{ route('contact') }}/#contactFormSec" class="download-btn">
                             <i class="fa-brands fa-google-play"></i>
                             <div class="text-group">
-                                <span class="small-text">Download From</span>
-                                <h6 class="big-text">Google Play</h6>
+                                
+                                <h6 class="big-text">Get In Touch</h6>
                             </div>
                         </a>
-                        <a target="_blank" href="https://www.apple.com/store" class="download-btn bg-theme2">
-                            <i class="fa-brands fa-apple"></i>
-                            <div class="text-group">
-                                <span class="small-text">Download From</span>
-                                <h6 class="big-text">App Store</h6>
-                            </div>
-                        </a>
+                       
                     </div>
                 </div>
             </div>
@@ -877,100 +871,27 @@ Hero Area
         </div>
         <div class="row slider-shadow number-dots as-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-xs-slide-show="1" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
             <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="{{ asset('frontendFiles/assets/img/team/team_1_1.jpg')}}" alt="Team">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-title box-title"><a href="team-details.html">Sharad Golchha</a></h3>
-                        <span class="team-desig">Chief Executive</span>
-                        <div class="as-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+            @if(isset($teams) && count($teams) > 0)
+                @foreach ($teams as $team)
+                <div class="col-md-6 col-lg-4 col-xxl-3">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="{{ getOrginalUrl($team->image) ?? asset('frontendFiles/assets/img/team/team_1_1.jpg')}}" alt="Team">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="team-title box-title">
+                                {{ $team->name ?? ''}}
+                            </h3>
+                            <span class="team-desig">{{ $team->designation }}</span>
+                            <div class="as-social">
+                                
+                                <a target="_blank" href="{{ $team->linkedin_link ?? '#'}}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="{{ asset('frontendFiles/assets/img/team/team_1_2.jpg')}}" alt="Team">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-title box-title"><a href="team-details.html">Sir CK Golchha</a></h3>
-                        <span class="team-desig">Chairman</span>
-                        <div class="as-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="{{ asset('frontendFiles/assets/img/team/team_1_3.jpg')}}" alt="Team">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-title box-title"><a href="team-details.html">Abhigyan Golchha</a></h3>
-                        <span class="team-desig">Managing Director</span>
-                        <div class="as-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="{{ asset('frontendFiles/assets/img/team/team_1_4.jpg')}}" alt="Team">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-title box-title"><a href="team-details.html">Chandrika Jee</a></h3>
-                        <span class="team-desig">Quality Control</span>
-                        <div class="as-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xxl-3">
-                <div class="team-card">
-                    <div class="team-img">
-                        <img src="{{ asset('frontendFiles/assets/img/team/team_1_5.jpg')}}" alt="Team">
-                    </div>
-                    <div class="team-content">
-                        <h3 class="team-title box-title"><a href="team-details.html">Randir Jha</a></h3>
-                        <span class="team-desig">Account Officer</span>
-                        <div class="as-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a target="_blank" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-                            <a target="_blank" href="https://linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                @endforeach
+            @endif
         </div>
     </div>
 </section>
@@ -998,108 +919,40 @@ Hero Area
             </div>
         </div> <!-- / Title row -->
         <div class="row slider-shadow as-carousel" id="testiSlide1" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="1">
-            <div class="col-xl-4 col-lg-6">
-                <div class="testi-box">
-                    <div class="testi-box_icon">
-                        <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg')}}" alt="quote">
-                    </div>
-                    <p class="testi-box_text">“Agrim products are of high quality and always fresh. The taste and flavors are amazing, and packaging is attractive.”</p>
-                    <div class="testi-box_review">
-                        <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
-                    </div>
-                    <div class="testi-box_profile">
-                        <div class="testi-box_avater">
-                            <img src="{{ asset('frontendFiles/assets/img/testimonial/profile.png')}}" alt="Avater">
+            @if (isset($testimonials) && count($testimonials) > 0)
+            @foreach ($testimonials as $testimonial )
+                <div class="col-xl-4 col-lg-6">
+                    <div class="testi-box">
+                        <div class="testi-box_icon">
+                            <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg')}}" alt="quote">
                         </div>
-                        <div class="media-body">
-                            <h3 class="testi-box_name">Rayan Kook</h3>
-                            <span class="testi-box_desig">NYC, USA</span>
+                        <p class="testi-box_text">{!! $testimonial->description !!}</p>
+                        <div class="testi-box_review">
+                            <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
                         </div>
-                    </div>
-                    <div class="testi-box_img">
-                        <img src="{{ asset('frontendFiles/assets/img/testimonial/review_1_1.png') }}" alt="Reveiw Image">
+                        <div class="testi-box_profile">
+                            <div class="testi-box_avater">
+                                <img src="{{ getOrginalUrl($testimonial->image_id)}}" alt="Avater">
+                            </div>
+                            <div class="media-body">
+                                <h3 class="testi-box_name">{{ $testimonial->name }}</h3>
+                                <span class="testi-box_desig">{{ $testimonial->address ?? $testimonial->company_name }}</span>
+                            </div>
+                        </div>
+                        <div class="testi-box_img">
+                            <img src="{{getOrginalUrl($testimonial->company_logo) ?? asset('frontendFiles/assets/img/testimonial/review_1_1.png') }}" alt="Reveiw Image">
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-xl-4 col-lg-6">
-                <div class="testi-box">
-                    <div class="testi-box_icon">
-                        <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg')}}" alt="quote">
-                    </div>
-                    <p class="testi-box_text">“I highly recommend Agrim to anyone looking for delicious and nutritious food options. Keep up the great work!”</p>
-                    <div class="testi-box_review">
-                        <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
-                    </div>
-                    <div class="testi-box_profile">
-                        <div class="testi-box_avater">
-                            <img src="{{ asset('frontendFiles/assets/img/testimonial/profile.png')}}" alt="Avater">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="testi-box_name">Michel Clark</h3>
-                            <span class="testi-box_desig">DYM, USA</span>
-                        </div>
-                    </div>
-                    <div class="testi-box_img">
-                        <img src="{{ asset('frontendFiles/assets/img/testimonial/review_1_2.png') }}" alt="Reveiw Image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6">
-                <div class="testi-box">
-                    <div class="testi-box_icon">
-                        <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg')}}" alt="quote">
-                    </div>
-                    <p class="testi-box_text">“Agrim products are of high quality and always fresh. The taste and flavors are amazing, and packaging is attractive.”</p>
-                    <div class="testi-box_review">
-                        <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
-                    </div>
-                    <div class="testi-box_profile">
-                        <div class="testi-box_avater">
-                            <img src="{{ asset('frontendFiles/assets/img/testimonial/profile.png')}}" alt="Avater">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="testi-box_name">Rosse Mons</h3>
-                            <span class="testi-box_desig">DO, USA</span>
-                        </div>
-                    </div>
-                    <div class="testi-box_img">
-                        <img src="{{ asset('frontendFiles/assets/img/testimonial/review_1_3.png') }}" alt="Reveiw Image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-4 col-lg-6">
-                <div class="testi-box">
-                    <div class="testi-box_icon">
-                        <img src="{{ asset('frontendFiles/assets/img/icon/quote_left.svg')}}" alt="quote">
-                    </div>
-                    <p class="testi-box_text">“I highly recommend Agrim to anyone looking for delicious and nutritious food options. Keep up the great work!”</p>
-                    <div class="testi-box_review">
-                        <i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i><i class="fa-sharp fa-solid fa-star"></i>
-                    </div>
-                    <div class="testi-box_profile">
-                        <div class="testi-box_avater">
-                            <img src="{{ asset('frontendFiles/assets/img/testimonial/profile.png')}}" alt="Avater">
-                        </div>
-                        <div class="media-body">
-                            <h3 class="testi-box_name">Naisa Carg</h3>
-                            <span class="testi-box_desig">TO, USA</span>
-                        </div>
-                    </div>
-                    <div class="testi-box_img">
-                        <img src="{{ asset('frontendFiles/assets/img/testimonial/review_1_4.png') }}" alt="Reveiw Image">
-                    </div>
-                </div>
-            </div>
-
+            @endif
         </div>
     </div>
     <div class="shape-mockup chili jump-reverse" data-top="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/red_chili.png')}}" alt="shape"></div>
     <div class="shape-mockup leaf jump-reverse" data-top="0%" data-left="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_1.png')}}" alt="shape"></div>
     <div class="shape-mockup leaf jump" data-bottom="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_2.png')}}" alt="shape"></div>
-    <div class="shape-mockup leaf jump" data-bottom="3%" data-left="2%"><img src="{{ asset('frontendFiles/assets/img/shape/burger_1.png') }}" alt="shape"></div>
+    <div class="shape-mockup leaf jump" data-bottom="3%" data-left="2%"><img src="{{ asset('frontendFiles/assets/img/shape/Burger_1.png') }}" alt="shape"></div>
 </section>
 <!--==============================Blog Area==============================-->
 <section class="space">
@@ -1113,7 +966,39 @@ Hero Area
             <p class="sec-text ms-auto me-auto">Agrim Foods encourages recipe-making, as it allows individuals to share their culinary skills and knowledge, as well as discover new and exciting dishes.</p>
         </div>
         <div class="row slider-shadow as-carousel" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2" data-sm-slide-show="1" data-arrows="true">
+            @if (isset($recipes) && count($recipes)>0)
+            @foreach ($recipes as $recipe)
             <div class="col-md-6 col-xl-4">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="{{ getOrginalUrl($recipe->image_id)}}" alt="{{ $recipe->title }}">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                        
+                            <a href="{{ route('recipeSingle',$recipe->slug) }}"><i class="fa-light fa-calendar-days"></i>{{ $recipe->created_at->format('d M Y')}}</a>
+                            <br>
+                            @if($recipe->products->count() > 0)
+                                <i class="fa-regular fa-tag pr-1 text-danger"></i>
+                                @foreach ($recipe->products as $product)
+                                    <a href="{{ route('recipeSingle',$product->slug) }}" class="ml-2"> {{ $product->title}}</a>
+                                @endforeach
+                            @endif
+                        </div>
+                        <h3 class="blog-title"><a href="{{ route('recipeSingle',$recipe->slug) }}">{{ $recipe->title }}</a></h3>
+                        <div class="blog-bottom">
+                            <a href="{{ route('recipeSingle',$recipe->slug) }}" class="line-btn">Read More</a>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            @endforeach
+        @endif
+            
+            
+            {{-- <div class="col-md-6 col-xl-4">
                 <div class="blog-card">
                     <div class="blog-img">
                         <img src="{{ asset('frontendFiles/assets/img/blog/blog_1_1.jpg')}}" alt="blog image">
@@ -1188,7 +1073,7 @@ Hero Area
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
     <div class="shape-mockup leaf jump-reverse" data-bottom="7%" data-left="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_1.png')}}" alt="shape"></div>

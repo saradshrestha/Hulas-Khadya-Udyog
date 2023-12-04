@@ -22,10 +22,18 @@ class TestimonialRepository implements TestimonialInterface
         $testimonial->name = $request->name;
         $testimonial->status = $request->status;
         $testimonial->description = $request->description;
+        $testimonial->address= $request->address;
+        $testimonial->company_name= $request->company_name;
         if ($request->hasFile('image')) {
             $uploaded = $this->files->storeFile($request->image);
             if ($uploaded) {
                 $testimonial->image_id = $uploaded->id;
+            }
+        }
+        if ($request->hasFile('company_logo')) {
+            $uploaded = $this->files->storeFile($request->company_logo);
+            if ($uploaded) {
+                $testimonial->company_logo = $uploaded->id;
             }
         }
         $testimonial->save();   
@@ -35,16 +43,22 @@ class TestimonialRepository implements TestimonialInterface
 
     public function update($slug, $request)
     {
-     
-      
         $testimonial = Testimonial::where('slug', $slug)->first();
         $testimonial->name = $request->name;
         $testimonial->status = $request->status;
         $testimonial->description = $request->description;
+        $testimonial->address= $request->address;
+        $testimonial->company_name= $request->company_name;
         if ($request->hasFile('image')) {
             $uploaded = $this->files->storeFile($request->image);
             if ($uploaded) {
                 $testimonial->image_id = $uploaded->id;
+            }
+        }
+        if ($request->hasFile('company_logo')) {
+            $uploaded = $this->files->storeFile($request->company_logo);
+            if ($uploaded) {
+                $testimonial->company_logo = $uploaded->id;
             }
         }
         $testimonial->update();           
