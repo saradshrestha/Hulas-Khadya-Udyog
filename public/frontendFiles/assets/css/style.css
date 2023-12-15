@@ -1095,6 +1095,9 @@ textarea.is-invalid {
   .icon-box .slick-arrow {
     margin-right: 0;
   }
+  .social-media-box {
+      display: none;
+  }
 }
 
 /*------------------- 2.5. Mobile Menu -------------------*/
@@ -1327,6 +1330,9 @@ textarea.is-invalid {
   .as-menu-wrapper .as-menu-area {
     width: 100%;
     max-width: 270px;
+  }
+  .social-media-box {
+      display: none;
   }
   .as-mobile-menu > ul {
     padding: 0 20px;
@@ -1909,6 +1915,9 @@ textarea.is-invalid {
   .sec-btn {
     --section-title-space: 65px;
   }
+    .social-media-box {
+        display: none;
+    }
 }
 
 /* Medium devices */
@@ -4280,7 +4289,7 @@ a.text-theme:hover,
 .header-social a {
   font-size: 14px;
   display: inline-block;
-  color: var(--body-color);
+  color: black;
   margin: 0 10px 0 0;
 }
 
@@ -4289,7 +4298,7 @@ a.text-theme:hover,
 }
 
 .header-social a:hover {
-  color: var(--theme-color);
+    color: var(--theme-color);
 }
 
 .link-box {
@@ -4477,6 +4486,9 @@ a.text-theme:hover,
 @media (max-width: 575px) {
   .logo-style1 img {
     height: 60px;
+  }
+  .social-media-box {
+      display: none;
   }
 }
 

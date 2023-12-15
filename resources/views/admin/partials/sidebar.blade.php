@@ -168,14 +168,14 @@
                     </div>
                 </a>
             </li>
-            <li class="menu">
+            {{-- <li class="menu">
                 <a href="{{ route('admin.career') }}" data-active="{{ (Request::routeIs('admin.career*')) ? 'true' : ''}}" class="dropdown-toggle">
                     <div class="">
                         <i class="fas fa-envelope-open"></i>
                         <span>Career</span>
                     </div>
                 </a>
-            </li>
+            </li> --}}
 
             {{-- <li class="menu">
                 <a href="{{ route('admin.enquiry') }}" data-active="{{ (Request::routeIs('admin.enquiry*')) ? 'true' : ''}}" class="dropdown-toggle">

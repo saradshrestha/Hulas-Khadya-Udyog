@@ -44,7 +44,7 @@ Hero Area
             <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-desktop ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:495px; left:308px; width:374px; height:35px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
-            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:14px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:162px; left:344px; top:510px; text-transform:capitalize; line-height:14px; padding-bottom:20px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D;" class="ls-button-layer">
                     BROWSE PRODUCTS
                 </ls-layer>
@@ -61,12 +61,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:700; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:80px; top:380px; left:340px; color:#ffffff; font-size:70px; white-space:normal;" class="ls-l hero-title ls-hide-tablet ls-hide-phone ls-text-layer" data-ls="offsetxin:500; delayin:160; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 Agrim <span class="font-style text-theme2"> Chakki Atta</span>
             </h1>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:78px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D; line-height:32px; width:270px;" class="ls-button-layer">
                     ORDER NOW
                 </ls-layer>
             </a>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="menu-fast.html" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('recipes') }}" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:378px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; line-height:32px; width:310px; background-color:#eb0029;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -80,12 +80,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:700; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:110px; top:391px; left:72px; color:#ffffff; font-size:100px; white-space:normal;" class="ls-l hero-title ls-hide-desktop ls-hide-phone ls-text-layer" data-ls="offsetxin:500; delayin:160; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 LIKE <span class="font-style text-theme2"> FOODS</span>
             </h1>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-tablet" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-tablet" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:42px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:78px; top:549px; text-transform:capitalize; padding-bottom:40px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D; line-height:42px; width:340px; padding-top:40px;" class="ls-button-layer">
                     ORDER NOW
                 </ls-layer>
             </a>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-tablet" href="menu-fast.html" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-tablet" href="{{ route('recipes') }}" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
                 <ls-layer style="font-size:42px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:464px; top:549px; text-transform:capitalize; padding-bottom:40px; padding-top:40px; font-weight:600; border-radius:999px 999px 999px 999px; line-height:42px; background-color:#eb0029; width:400px;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -134,7 +134,7 @@ Hero Area
             <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:485px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-desktop ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:495px; left:308px; width:374px; height:35px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
-            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:14px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:162px; left:344px; top:510px; text-transform:capitalize; line-height:14px; padding-bottom:20px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D;" class="ls-button-layer">
                     BROWSE PRODUCTS
                 </ls-layer>
@@ -151,12 +151,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:700; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:80px; top:380px; left:340px; color:#ffffff; font-size:70px; white-space:normal;" class="ls-l hero-title ls-hide-tablet ls-hide-phone ls-text-layer" data-ls="offsetxin:500; delayin:160; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 Roll, top, <span class="font-style text-theme2"> and bake.</span>
             </h1>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:78px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D; line-height:32px; width:270px;" class="ls-button-layer">
                     ORDER NOW
                 </ls-layer>
             </a>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="menu-fast.html" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('recipes') }}" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:378px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; line-height:32px; width:310px; background-color:#eb0029;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -189,7 +189,7 @@ Hero Area
             <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png')}} class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:0px;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-tablet ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:458px; left:584px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-hide-desktop ls-hide-phone ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:495px; left:446px; width:374px; height:35px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
-            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-tablet ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:14px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:162px; left:344px; top:510px; text-transform:capitalize; line-height:14px; padding-bottom:20px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D;" class="ls-button-layer">
                     BROWSE PRODUCTS
                 </ls-layer>
@@ -206,12 +206,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:700; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:80px; top:380px; left:340px; color:#ffffff; font-size:70px; white-space:normal;" class="ls-l hero-title ls-hide-tablet ls-hide-phone ls-text-layer" data-ls="offsetxin:500; delayin:160; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 on every <span class="font-style text-theme2"> Agrim foods.</span>
             </h1>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="shop.html" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('products') }}" target="_self" data-ls="offsetxin:500; delayin:180; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#ff9d2d; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:78px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#FF9D2D; line-height:32px; width:270px;" class="ls-button-layer">
                     ORDER NOW
                 </ls-layer>
             </a>
-            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="menu-fast.html" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
+            <a style="" class="ls-l ls-hide-desktop ls-hide-phone" href="{{ route('recipes') }}" target="_self" data-ls="offsetxin:500; delayin:200; easingin:easeOutBack; bgcolorin:transparent; colorin:transparent; offsetxout:-120; durationout:800; startatout:slidechangeonly + ; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#ffffff; hovercolor:#eb0029; position:fixed;">
                 <ls-layer style="font-size:32px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; left:378px; top:549px; text-transform:capitalize; padding-bottom:30px; padding-top:30px; font-weight:600; border-radius:999px 999px 999px 999px; line-height:32px; width:310px; background-color:#eb0029;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -240,13 +240,13 @@ Hero Area
 
         <!-- Slide 1-->
         <div class="ls-slide" data-ls="duration:5000; transition2d:5; kenburnsscale:1.2;">
-            <img width="500" height="510" src="assets/img/hero/hero_bg_phone_1_1.jpg" class="ls-bg" alt="bg">
-            <img width="190" height="118" src="assets/img/hero/hero_shape_7.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
-            <img width="200" height="173" src="assets/img/hero/hero_shape_8.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_2_2.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
-            <img width="133" height="168" src="assets/img/hero/hero_shape_4.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_5.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
-            <img width="943" height="763" src="assets/img/hero/hero_shape_3.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+            <img width="500" height="510" src="{{ asset('frontendFiles/assets/img/hero/agrmi-product-mobile-1.jpeg') }}" class="ls-bg" alt="bg">
+            <img width="190" height="118" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_7.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
+            <img width="200" height="173" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_8.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
+            <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_6.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_5.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
+            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:281px; left:125px; width:180px; height:16px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:54px; top:110px; left:15px; font-weight:800; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:-150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 WE SERVE THE
@@ -257,12 +257,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:800; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:55px; top:226px; left:15px; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l hero-title ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 LIKE <span class="font-style text-theme2"> FOODS</span>
             </h1>
-            <a style="" class="ls-l" href="shop.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('products') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:20px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:198px; left:15px; top:326px; text-transform:uppercase; line-height:20px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#eb0029; padding-bottom:22px; padding-top:22px;" class="ls-button-layer">
                     Order now
                 </ls-layer>
             </a>
-            <a style="" class="ls-l" href="menu-fast.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('recipes') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:19px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:178px; left:234px; top:326px; text-transform:uppercase; line-height:19px; padding-bottom:22px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#ff9d2d;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -272,13 +272,13 @@ Hero Area
 
         <!-- Slide 2-->
         <div class="ls-slide" data-ls="duration:5000; transition2d:5; kenburnsscale:1.2;">
-            <img width="500" height="510" src="assets/img/hero/hero_bg_phone_1_2.jpg" class="ls-bg" alt="bg">
-            <img width="190" height="118" src="assets/img/hero/hero_shape_7.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
-            <img width="200" height="173" src="assets/img/hero/hero_shape_8.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_2_2.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
-            <img width="133" height="168" src="assets/img/hero/hero_shape_4.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_5.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
-            <img width="943" height="763" src="assets/img/hero/hero_shape_3.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+            <img width="500" height="510" src="{{ asset('frontendFiles/assets/img/hero/agrmi-product-mobile-2.jpeg') }}" class="ls-bg" alt="bg">
+            <img width="190" height="118" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_7.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
+            <img width="200" height="173" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_8.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_6.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
+            <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_5.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
+            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:281px; left:115px; width:180px; height:16px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:54px; top:110px; left:15px; font-weight:800; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:-150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 YOU ALWAYS LIKE
@@ -289,12 +289,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:800; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:55px; top:226px; left:15px; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l hero-title ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 FAST <span class="font-style text-theme2"> FOODS</span>
             </h1>
-            <a style="" class="ls-l" href="shop.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('products') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:20px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:198px; left:15px; top:326px; text-transform:uppercase; line-height:20px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#eb0029; padding-bottom:22px; padding-top:22px;" class="ls-button-layer">
                     Order now
                 </ls-layer>
             </a>
-            <a style="" class="ls-l" href="menu-fast.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('recipes') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:19px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:178px; left:234px; top:326px; text-transform:uppercase; line-height:19px; padding-bottom:22px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#ff9d2d;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -304,13 +304,13 @@ Hero Area
 
         <!-- Slide 3-->
         <div class="ls-slide" data-ls="duration:5000; transition2d:5; kenburnsscale:1.2;">
-            <img width="500" height="510" src="assets/img/hero/hero_bg_phone_1_3.jpg" class="ls-bg" alt="bg">
-            <img width="190" height="118" src="assets/img/hero/hero_shape_7.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
-            <img width="200" height="173" src="assets/img/hero/hero_shape_8.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_2_2.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
-            <img width="133" height="168" src="assets/img/hero/hero_shape_4.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
-            <img width="153" height="149" src="assets/img/hero/hero_shape_5.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
-            <img width="943" height="763" src="assets/img/hero/hero_shape_3.png" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
+            <img width="500" height="510" src="{{ asset('frontendFiles/assets/img/hero/agrmi-product-mobile-3.jpeg') }}" class="ls-bg" alt="bg">
+            <img width="190" height="118" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_7.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:453px; left:15px; width:92px; height:57px;" data-ls="offsetyin:200; durationin:1400; rotatein:60deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; rotation:00deg; position:fixed;">
+            <img width="200" height="173" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_8.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:434px; left:181px; width:65px; height:56px;" data-ls="offsetyin:200; durationin:1400; rotatein:-90deg; bgcolorin:transparent; colorin:transparent; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_4.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:194px; left:19px; width:56px; height:54px;" data-ls="offsetxin:-300; durationin:1400; rotatein:80deg; durationout:1500; parallax:true; parallaxlevel:10; parallaxdurationmove:800; position:fixed;">
+            <img width="133" height="168" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_6.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:0px; left:0px; width:65px; height:82px;" data-ls="offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:5000; parallax:true; parallaxlevel:12; parallaxdurationmove:400; position:fixed;">
+            <img width="153" height="149" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_5.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:300px; width:69px; height:68px;" data-ls="offsetxin:100; offsetyin:-300; durationin:1500; delayin:80; rotatein:40deg; bgcolorin:transparent; colorin:transparent; durationout:1500; parallax:true; parallaxlevel:8; parallaxdurationmove:400; position:fixed;">
+            <img width="943" height="763" src="{{ asset('frontendFiles/assets/img/hero/hero_shape_3.png') }}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:19px; left:-1px; width:494px; height:430px; z-index:5;" data-ls="offsetxin:-600; durationin:1500; delayin:80; bgcolorin:transparent; colorin:transparent; position:fixed;">
             <img width="291" height="27" src="{{ asset('frontendFiles/assets/img/hero/title_line.png')}}" class="ls-l ls-img-layer" alt="hero img" style="font-size:36px; color:#000; text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:400; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; top:281px; left:175px; width:180px; height:16px;" data-ls="durationin:1500; delayin:400; clipin:0 100% 0 0; position:fixed;">
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:54px; top:110px; left:15px; font-weight:800; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:-150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 WE PROVIDE BEST
@@ -321,12 +321,12 @@ Hero Area
             <h1 style="text-align:left; font-style:normal; text-decoration:none; text-transform:none; font-weight:800; letter-spacing:0px; background-position:0% 0%; background-repeat:no-repeat; font-family:Rubik; line-height:55px; top:226px; left:15px; font-size:44px; color:#ffffff; white-space:normal;" class="ls-l hero-title ls-text-layer" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; position:fixed;">
                 YUMMY <span class="font-style text-theme2"> FOODS</span>
             </h1>
-            <a style="" class="ls-l" href="shop.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('products') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:20px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:198px; left:15px; top:326px; text-transform:uppercase; line-height:20px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#eb0029; padding-bottom:22px; padding-top:22px;" class="ls-button-layer">
                     Order now
                 </ls-layer>
             </a>
-            <a style="" class="ls-l" href="menu-fast.html" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
+            <a style="" class="ls-l" href="{{ route('recipes') }}" target="_self" data-ls="offsetyin:-100lh; durationin:1500; easingin:easeOutQuint; bgcolorin:transparent; colorin:transparent; offsetyout:150; durationout:1500; easingout:easeInQuint; bgcolorout:transparent; colorout:transparent; hover:true; hoveropacity:1; hoverbgcolor:#010f1c; hovercolor:#ffffff; position:fixed;">
                 <ls-layer style="font-size:19px; color:#fff; text-align:center; font-family:Rubik; cursor:pointer; width:178px; left:234px; top:326px; text-transform:uppercase; line-height:19px; padding-bottom:22px; padding-top:22px; font-weight:600; border-radius:999px 999px 999px 999px; background-color:#ff9d2d;" class="ls-button-layer">
                     BROWSE MENU
                 </ls-layer>
@@ -466,7 +466,7 @@ Hero Area
                     <div class="menu-card_content">
                         <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Maida</a></h3>
                         <p class="menu-card_text">Agrim Maida: Essential for making delicious Nepali breads and dishes.</p>
-                        <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
+                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
             </div>
@@ -479,7 +479,7 @@ Hero Area
                     <div class="menu-card_content">
                         <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Suji</a></h3>
                         <p class="menu-card_text">Agrim Suji is a high-quality semolina flour for cooking that enhances texture and flavor.</p>
-                        <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
+                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
             </div>
@@ -492,7 +492,7 @@ Hero Area
                     <div class="menu-card_content">
                         <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Zeera Masino</a></h3>
                         <p class="menu-card_text">Agrim Zeera Masino Rice is a premium quality rice that adds flavor and nutrition to meals.</p>
-                        <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
+                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
             </div>
@@ -505,7 +505,7 @@ Hero Area
                     <div class="menu-card_content">
                         <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Sonam Rice</a></h3>
                         <p class="menu-card_text">Agrim Jeera Masino Rice is a special variety of rice grown in Far West Tarai, Nepal.</p>
-                        <a href="menu-fast.html" class="as-btn">BROWSE MENU</a>
+                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
                     </div>
                 </div>
             </div> --}}
@@ -592,7 +592,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_1.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Flour</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Flour</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -616,7 +616,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Flour</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Flour</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -640,7 +640,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Poha</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Poha</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -664,7 +664,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Rice</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -688,7 +688,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_5.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Rice</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -712,7 +712,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_6.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Rice</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -736,7 +736,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_7.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Rice</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -760,7 +760,7 @@ Hero Area
                         <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_8.png')}}" alt="Product Image">
                     </div>
                     <div class="product-content">
-                        <a href="shop.html" class="category">Agrim Rice</a>
+                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
                         <div class="product-rating">
                             <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
                                 <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
@@ -779,7 +779,7 @@ Hero Area
             </div>
         </div>
         <div class="text-center mt-5">
-            <a href="shop.html" class="as-btn">View All Products</a>
+            <a href="{{ route('products') }}" class="as-btn">View All Products</a>
         </div>
     </div>
     <div class="shape-mockup chili jump-reverse" data-top="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/red_chili.png')}}" alt="shape"></div>
@@ -815,7 +815,7 @@ Hero Area
                 <h2 class="text-white fw-semibold mt-n2">Make a TikTok recipe video <br> win 50,000 cash prize</h2>
                 <p class="text-white mb-4">Create a delicious recipe video featuring Agrim Suji on TikTok for a chance to win 50,000 rupees cash. Showcase your culinary skills and creativity, and you could be the lucky winner of this exciting prize. So, grab your phone, start filming and get ready to share your recipe with the world.</p>
                 <div class="btn-wrap">
-                    <a href="shop.html" class="as-btn style6">Join now</a>
+                    <a href="{{ route('products') }}" class="as-btn style6">Join now</a>
                     <h5 class="price_style1"> - <del></del></h5>
                 </div>
             </div>

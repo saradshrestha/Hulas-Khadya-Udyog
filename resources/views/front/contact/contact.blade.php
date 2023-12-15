@@ -7,7 +7,7 @@
 
 @section('content')
  <!--==============================Breadcumb============================== -->
-<div class="breadcumb-wrapper " data-bg-src="{{ asset('frontendFiles/assets/img/breadcumb/breadcumb-bg.jpg')}}">
+<div class="breadcumb-wrapper ">
     <div class="container z-index-common">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Contact <span class="font-style text-theme2">Us</span></h1>
