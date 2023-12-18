@@ -6,17 +6,20 @@
 
 @section('content')
     <!--==============================Breadcumb============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="{{ asset('frontendFiles/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+    <div class="breadcumb-wrapper " data-bg-src="">
+        {{-- {{ asset('frontendFiles/assets/img/breadcumb/breadcumb-bg.jpg') }} --}}
         <div class="container z-index-common">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">About <span class="font-style text-theme2">Us</span></h1>
                 <ul class="breadcumb-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ route('index') }}">Home</a></li>
                     <li>About Us</li>
                 </ul>
             </div>
         </div>
     </div>
+
+    
 
     <div class="space position-relative">
         <div class="about-line" data-bg-src="{{ asset('frontendFiles/assets/img/shape/about_line.png') }}"></div>
@@ -126,20 +129,11 @@
             <div class="container">
                 <div class="row flex-row-reverse">
                     <div class="col-xl-7 ps-xxl-5">
-                        <div class="img-box2 style2">
+                        <div class="img-box2">
                             <div class="img1">
-                                <img src="{{ asset('frontendFiles/assets/img/normal/about_2_1.png') }}" alt="About">
+                                <img src="{{ asset('frontendFiles/assets/about-page-main.png') }}" alt="About">
                             </div>
-                            <div class="shape1">
-                                <img src="{{ asset('frontendFiles/assets/img/normal/about_2_2.png') }}" alt="About">
-                            </div>
-                            <div class="discount_style1" data-bg-src="{{ asset('frontendFiles/assets/img/shape/discount_bg_1.svg') }}">
-                                <h4 class="percentage">
-                                    Agrim
-                                    <span class="small-text"><br> <span class="text"></span></span>
-                                </h4>
-                            </div>
-                            <a href="shop.html" class="order-btn"><span class="font-style text-theme">Order</span>Now</a>
+                           
                         </div>
                     </div>
                     <div class="col-xl-5 space-top space-xl">
@@ -159,7 +153,7 @@
                         <p class="mb-4">Our goal is to be the go-to brand for consumers seeking healthy, flavorful
                             ingredients for their meals.</p>
                         <div class="btn-wrap style1">
-                            <a href="about.html" class="as-btn">DISCOVER MORE</a>
+                            <a href="{{ route('products') }}" class="as-btn">DISCOVER MORE</a>
                             <div class="about-counter1">
                                 <h3 class="counter-title"><span class="counter-number">24</span></h3>
                                 <div class="media-body">
@@ -171,56 +165,56 @@
                     </div>
                 </div>
             </div>
-            <div class="shape-mockup about-shape3" data-bottom="120px" data-left="0">
-                <img src="{{ asset('frontendFiles/assets/img/shape/bg_shape_5.png')}}" alt="shapes"></div>
+            {{-- <div class="shape-mockup about-shape3" data-bottom="120px" data-left="0"> --}}
+                {{-- <img src="{{ asset('frontendFiles/assets/img/shape/chip_1.png')}}" alt="shapes"></div> --}}
             <div class="shape-mockup leaf jump" data-top="0%" data-left="5%"><img
-                    src="{{ asset('frontendFiles/assets/img/shape/chocolate_1.png')}}" alt="shape"></div>
-            <div class="shape-mockup leaf jump-reverse d-none d-xl-block" data-bottom="10%" data-right="5%"><img
-                    src="{{ asset('frontendFiles/assets/img/shape/pot_1.png') }}" alt="shape"></div>
+                    src="{{ asset('frontendFiles/assets/img/shape/red_chili.png')}}" alt="shape"></div>
+            <div class="shape-mockup leaf jump-reverse d-none d-xl-block" data-bottom="10%" data-right="0%"><img
+                    src="{{ asset('frontendFiles/assets/img/shape/chips_1.png') }}" alt="shape"></div>
         </div>
     </div>
 
     <!--==============================
         Feature Area
         ==============================-->
-    <section class="space bg-title" data-bg-src="{{ asset('frontendFiles/assets/img/bg/feature_bg_2.png')}}">
+    <section class="space bg-title" data-bg-src="{{ asset('')}}">
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title">
                     <img class="icon" src="{{ asset('frontendFiles/assets/img/icon/wheat.png')}}" alt="icon">
-                    Our Brands
+                    Our Products
                 </span>
-                <h2 class="sec-title text-white">Our Most Loved <span class="font-style text-theme">Brands</span></h2>
+                <h2 class="sec-title text-white">Our Most Loved <span class="font-style text-theme">Products</span></h2>
                 <p class="sec-text ms-auto me-auto text-white">Agrim Foods is widely regarded as the best brand for tasty,
                     healthy, and preferred foods.</p>
             </div>
             <div class="feature-grid-wrap">
                 <div class="feature-grid">
                     <div class="feature-grid_img">
-                        <img src="{{ asset('frontendFiles/assets/img/logo.png') }}" alt="Food">
+                        <img src="{{ asset('frontendFiles/assets/file/Hygienic Foods .png') }}" alt="Food">
                     </div>
                     <div>
-                        <h3 class="feature-grid_title box-title text-white">Agrim Foods</h3>
+                        <h3 class="feature-grid_title box-title text-white">Hygienic Foods</h3>
                         <p class="feature-grid_text text-border">Whether you are looking for breakfast cereals, snacks, or
                             meals, Agrim Foods has a product that will suit your needs and preferences.</p>
                     </div>
                 </div>
                 <div class="feature-grid">
                     <div class="feature-grid_img">
-                        <img src="{{ asset('frontendFiles/assets/img/logo.png') }}" alt="Food">
+                        <img src="{{ asset('frontendFiles/assets/file/healthy Foods .png') }}" alt="Food">
                     </div>
                     <div>
-                        <h3 class="feature-grid_title box-title text-white">Agrim Foods</h3>
+                        <h3 class="feature-grid_title box-title text-white">Healthy Foods</h3>
                         <p class="feature-grid_text text-border">Whether you are looking for breakfast cereals, snacks, or
                             meals, Agrim Foods has a product that will suit your needs and preferences.</p>
                     </div>
                 </div>
                 <div class="feature-grid">
                     <div class="feature-grid_img">
-                        <img src="{{ asset('frontendFiles/assets/img/logo.png') }}" alt="Food">
+                        <img src="{{ asset('frontendFiles/assets/file/natural food.png') }}" alt="Food">
                     </div>
                     <div>
-                        <h3 class="feature-grid_title box-title text-white">Agrim Foods</h3>
+                        <h3 class="feature-grid_title box-title text-white">Natural Foods</h3>
                         <p class="feature-grid_text text-border">Whether you are looking for breakfast cereals, snacks, or
                             meals, Agrim Foods has a product that will suit your needs and preferences.</p>
                     </div>
@@ -323,7 +317,7 @@
                             </div>
                             <div class="testi-box_img">
                                 <img src="{{getOrginalUrl($testimonial->company_logo) ?? asset('frontendFiles/assets/img/testimonial/review_1_1.png') }}" alt="Reveiw Image">
-                            </div>
+                            </div>  
                         </div>
                     </div>
                 @endforeach

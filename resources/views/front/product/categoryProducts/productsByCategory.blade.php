@@ -23,13 +23,26 @@
     </style>
 @endpush
 
-@section('banner')
-    @include('front.product.categoryProducts.categoryBanner')
-@endsection
+
+
+
 
 
 @section('content')
-    <section class="category-sc pb-3" id="category-sc">
+<div class="breadcumb-wrapper " data-bg-src="assets/img/breadcumb/breadcumb-bg.jpg">
+    <div class="container z-index-common">
+        <div class="breadcumb-content">
+            <h1 class="breadcumb-title"><span class="font-style text-theme2">{{ $category->title }}</span></h1>
+            <ul class="breadcumb-menu">
+                <li><a href="{{ route('index') }}">Home</a></li>
+                <li> {{ $category->title }}'s Products</li>
+               
+
+            </ul>
+        </div>
+    </div>
+</div>
+    <section class="category-sc pb-3 mt-4" id="category-sc">
         <div class="container px-0">
             <div class="sc-title px-3 d-md-flex align-items-center justify-content-between">
                 <h3 class="text-capitalize text-white mb-4 mb-md-0 no-wrap">{{ $category->title }}</h3>
@@ -45,7 +58,7 @@
                 </div>
 
             </div>
-            <div class="category-sc-content mt-4 mt-md-0">
+            <div class="category-sc-content mt-4">
                 <div class="button-group category-btns filter-button-group px-3">
                     {{-- @dd($category) --}}
                     @if ($category->children->count() > 0)

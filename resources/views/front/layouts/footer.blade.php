@@ -49,7 +49,7 @@
                                 <li><a href="{{ route('aboutus') }}">About Us</a></li>
                                 <li><a href="{{ route('products') }}">Products</a></li>
                                 <li><a href="{{ route('recipes') }}">Recipes</a></li>
-                                <li><a href="{{route('index')}}#testimonial">Testimonial</a></li>
+                                {{-- <li><a href="{{route('index')}}#testimonial">Testimonial</a></li> --}}
                                 <li><a href="{{ route('contact')}}">Contact Us</a></li>
                             </ul>
                         </div>

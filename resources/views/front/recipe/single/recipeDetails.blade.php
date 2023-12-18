@@ -7,7 +7,7 @@
 @endpush
 
 @section('content')
-<div class="breadcumb-wrapper " data-bg-src="{{ asset('frontendFiles/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+<div class="breadcumb-wrapper " data-bg-src="{{ asset('') }}">
     <div class="container z-index-common">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Recipe<span class="font-style text-theme2">Details</span></h1>
@@ -30,9 +30,7 @@
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            {{-- <a href="blog.html"><i class="fa-regular fa-user"></i>By Pizzer</a> --}}
-                            {{-- <a href="blog.html"><i class="fa-light fa-calendar-days"></i>21 June, 2022</a>
-                            <a href="blog-details.html"><i class="fa-regular fa-comments"></i>Comments(3)</a> --}}
+                          
                             @if($recipe->products->count() > 0)
                                 <i class="fa-regular fa-tag pr-1 text-danger"></i>
                                 @foreach ($recipe->products as $product)
@@ -52,85 +50,14 @@
                         @endif
                       
                     </div>
-                    {{-- <div class="share-links clearfix ">
-                        <div class="row justify-content-between">
-                            <div class="col-sm-auto">
-                                <span class="share-links-title">Tags:</span>
-                                <div class="tagcloud">
-                                    <a href="blog.html">Fast Food</a>
-                                    <a href="blog.html">Dinner</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-auto text-xl-end">
-                                <span class="share-links-title">Share:</span>
-                                <ul class="social-links">
-                                    <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                </ul><!-- End Social Share -->
-                            </div><!-- Share Links Area end -->
-                        </div>
-                    </div> --}}
+                    
                 </div>
               
                
             </div>
             <div class="col-xxl-4 col-lg-5">
                 <aside class="sidebar-area">
-                    {{-- <div class="widget widget_search   ">
-                        <form class="search-form">
-                            <input type="text" placeholder="Search...">
-                            <button type="submit"><i class="far fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="widget widget_categories  ">
-                        <h3 class="widget_title">Categories</h3>
-                        <ul>
-                            <li>
-                                <img class="icon" src="assets/img/icon/category_1_1.svg" alt="icon">
-                                <a href="blog.html">Burger</a>
-                                <span>10</span>
-                            </li>
-                            <li>
-                                <img class="icon" src="assets/img/icon/category_1_2.svg" alt="icon">
-                                <a href="blog.html">Pizza</a>
-                                <span>08</span>
-                            </li>
-                            <li>
-                                <img class="icon" src="assets/img/icon/category_1_3.svg" alt="icon">
-                                <a href="blog.html">Combo</a>
-                                <span>15</span>
-                            </li>
-                            <li>
-                                <img class="icon" src="assets/img/icon/category_1_4.svg" alt="icon">
-                                <a href="blog.html">Chicken</a>
-                                <span>14</span>
-                            </li>
-                            <li>
-                                <img class="icon" src="assets/img/icon/category_1_5.svg" alt="icon">
-                                <a href="blog.html">Drinks</a>
-                                <span>12</span>
-                            </li>
-                        </ul>
-                    </div> --}}
-                    {{-- <div class="widget  ">
-                        <div class="author-widget-wrap">
-                            <div class="avater">
-                                <img src="assets/img/blog/author_1.jpg" alt="avater">
-                            </div>
-                            <div class="author-info">
-                                <h4 class="name"><a class="text-inherit" href="classes.html">Alone Mask</a></h4>
-                            </div>
-                            <p class="author-bio">Assertively pontificate high standards in scenarios rather than sustainable.</p>
-                            <div class="author-social">
-                                <a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
-                                <a href="https://pinterest.com"><i class="fab fa-pinterest-p"></i></a>
-                                <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div> --}}
+                  
                     <div class="widget  ">
                         <h3 class="widget_title">Recent Recipes</h3>
                         <div class="recent-post-wrap">

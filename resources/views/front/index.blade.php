@@ -409,7 +409,7 @@ Hero Area
                     </div>
                 </div>
                 <div class="btn-wrap">
-                    <a href="about.html" class="as-btn">DISCOVER MORE</a>
+                    <a href="{{ route('products') }}" class="as-btn">DISCOVER MORE</a>
                     <div class="profile-box">
                         <div class="avater">
                         
@@ -430,7 +430,7 @@ Hero Area
     <div class="container">
         <div class="title-area text-center">
             <span class="sub-title">
-                <img class="icon" src="assets/img/icon/soy_flour.png" alt="icon">
+                <img class="icon" src="{{ asset('frontendFiles/assets/img/icon/soy_flour.png') }}" alt="icon">
                 Our Products
             </span>
             <h2 class="sec-title">Browse Our <span class="font-style text-theme">Products</span></h2>
@@ -447,10 +447,10 @@ Hero Area
 
                     </div>
                     <div class="menu-card_content mt-1">
-                        <a href="#" class="category mt-1">{{ $product->category->title ?? ''}}</a>
+                        <a href="{{ route('productsByCategory',$product->category->slug) }}" class="category mt-1">{{ $product->category->title ?? ''}}</a>
 
-                        {{-- <h6 class="menu-card_title box-title"><a href="shop-details.html">{{ $product->category->title}}</a></h6> --}}
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">{{ $product->title}}</a></h3>
+                       
+                        <h3 class="menu-card_title box-title"><a href="{{ route('productSingle',$product->slug) }}">{{ $product->title}}</a></h3>
                         <p class="menu-card_text">Rs. {{ $product->price  ?? ''}}</p>
                         <a href="{{ route('productSingle',$product->slug)}}" class="as-btn">BROWSE MENU</a>
                     </div>
@@ -458,57 +458,7 @@ Hero Area
             </div>
             @endforeach
             @endif
-            {{-- <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="menu-card">
-                    <div class="menu-card_img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Menu Image">
-                    </div>
-                    <div class="menu-card_content">
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Maida</a></h3>
-                        <p class="menu-card_text">Agrim Maida: Essential for making delicious Nepali breads and dishes.</p>
-                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="menu-card">
-                    <div class="menu-card_img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Menu Image">
-                    </div>
-                    <div class="menu-card_content">
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Suji</a></h3>
-                        <p class="menu-card_text">Agrim Suji is a high-quality semolina flour for cooking that enhances texture and flavor.</p>
-                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="menu-card">
-                    <div class="menu-card_img">
-                        <img src="{{asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Menu Image">
-                    </div>
-                    <div class="menu-card_content">
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Zeera Masino</a></h3>
-                        <p class="menu-card_text">Agrim Zeera Masino Rice is a premium quality rice that adds flavor and nutrition to meals.</p>
-                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="menu-card">
-                    <div class="menu-card_img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_5.png')}}" alt="Menu Image">
-                    </div>
-                    <div class="menu-card_content">
-                        <h3 class="menu-card_title box-title"><a href="shop-details.html">Agrim Sonam Rice</a></h3>
-                        <p class="menu-card_text">Agrim Jeera Masino Rice is a special variety of rice grown in Far West Tarai, Nepal.</p>
-                        <a href="{{ route('recipes') }}" class="as-btn">BROWSE MENU</a>
-                    </div>
-                </div>
-            </div> --}}
+           
         </div>
     </div>
 </section>
@@ -572,261 +522,8 @@ Hero Area
         </div>
     </div>
 </div>
-<!--==============================Product Area  ==============================-->
-{{-- <section class="space">
-    <div class="container">
-        <div class="title-area text-center">
-            <span class="sub-title">
-                <img class="icon" src="{{ asset('frontendFiles/assets/img/icon/wheat.png')}}" alt="icon">
-                Shop Our Products
-            </span>
-            <h2 class="sec-title">Our Popular Agrim <span class="font-style text-theme">Brands</span></h2>
-            <p class="sec-text ms-auto me-auto">Whether you are looking for breakfast cereals, snacks, or meals, Agrim Foods has a product that will suit your needs and preferences.</p>
-          
-        </div>
-        <div class="row gy-40 filter-active">
 
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat1 cat3 cat4 cat5">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_1.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Flour</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Agrim Chakki Atta</a></h3>
-                        <span class="price">$80.85<del>$99.99</del></span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3 cat2">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Flour</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Agrim Maida</a></h3>
-                        <span class="price">$90.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2 cat5">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Poha</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Agrim Suji</a></h3>
-                        <span class="price">$60.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat1 cat2">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_2.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Agrim Zeera Masino</a></h3>
-                        <span class="price">$70.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat4 cat1">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_5.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Sonam Rice 5kg</a></h3>
-                        <span class="price">$20.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat2 cat3 cat5">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_6.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Sonam Rice 25kg</a></h3>
-                        <span class="price">$10.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat3 cat4 cat5">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_7.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Zeera Masio 25kg</a></h3>
-                        <span class="price">$20.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-sm-6 filter-item cat1 cat4">
-                <div class="as-product ">
-                    <div class="product-img">
-                        <img src="{{ asset('frontendFiles/assets/img/menu/menu_1_8.png')}}" alt="Product Image">
-                    </div>
-                    <div class="product-content">
-                        <a href="{{ route('products') }}" class="category">Agrim Rice</a>
-                        <div class="product-rating">
-                            <div class="star-rating" role="img" aria-label="Rated 4.00 out of 5">
-                                <span style="width:75%">Rated <strong class="rating">4.00</strong> out of 5</span>
-                            </div>
-                            (4.00)
-                        </div>
-                        <h3 class="product-title"><a href="shop-details.html">Sonam Rice 10kg</a></h3>
-                        <span class="price">$12.85</span>
-                        <div class="actions">
-                            <a href="#QuickView" class="icon-btn popup-content"><i class="fal fa-eye"></i></a>
-                            <a href="cart.html" class="icon-btn"><i class="fal fa-cart-plus"></i></a>
-                            <a href="wishlist.html" class="icon-btn"><i class="fal fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a href="{{ route('products') }}" class="as-btn">View All Products</a>
-        </div>
-    </div>
-    <div class="shape-mockup chili jump-reverse" data-top="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/red_chili.png')}}" alt="shape"></div>
-    <div class="shape-mockup leaf jump-reverse" data-top="20%" data-left="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_1.png')}}" alt="shape"></div>
-    <div class="shape-mockup leaf jump" data-bottom="0%" data-right="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_2.png')}}" alt="shape"></div>
-</section> --}}
-
-<!--==============================Offer Area ==============================-->
-{{-- <section class="space position-relative" data-bg-src="{{ asset('frontendFiles/assets/img/bg/offer_banner_1.jpg')}}">
-    <div class="container">
-        <div class="row gy-30">
-            <div class="col-md-1">
-                <ul class="discount_counter1 counter-list" data-offer-date="09/09/2023">
-                    <li>
-                        <div class="day count-number">00</div>
-                        <span class="count-name">Days</span>
-                    </li>
-                    <li>
-                        <div class="hour count-number">00</div>
-                        <span class="count-name">Hours</span>
-                    </li>
-                    <li>
-                        <div class="minute count-number">00</div>
-                        <span class="count-name">Min</span>
-                    </li>
-                    <li>
-                        <div class="seconds count-number">00</div>
-                        <span class="count-name">Sec</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-xl-6 col-lg-7 col-md-9 ps-md-5 offset-xl-1 space-bottom">
-                <h2 class="text-white fw-semibold mt-n2">Make a TikTok recipe video <br> win 50,000 cash prize</h2>
-                <p class="text-white mb-4">Create a delicious recipe video featuring Agrim Suji on TikTok for a chance to win 50,000 rupees cash. Showcase your culinary skills and creativity, and you could be the lucky winner of this exciting prize. So, grab your phone, start filming and get ready to share your recipe with the world.</p>
-                <div class="btn-wrap">
-                    <a href="{{ route('products') }}" class="as-btn style6">Join now</a>
-                    <h5 class="price_style1"> - <del></del></h5>
-                </div>
-            </div>
-        </div>
-        <div class="discount_style2" data-bg-src="{{ asset('frontendFiles/assets/img/shape/discount_bg_2.svg')}}">
-            <p class="small-text1">NOW, WIN</p>
-            <h3 class="percentage">50K</h3>
-            <p class="small-text2">CASH PRIZE</p>
-        </div>
-    </div>
-</section> --}}
 <!--==============================About Area  ==============================-->
 <div class="space-top">
     <div class="container">
@@ -971,7 +668,9 @@ Hero Area
             <div class="col-md-6 col-xl-4">
                 <div class="blog-card">
                     <div class="blog-img">
+                        <a href="{{ route('recipeSingle',$recipe->slug) }}">
                         <img src="{{ getOrginalUrl($recipe->image_id)}}" alt="{{ $recipe->title }}">
+                        </a>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
@@ -981,7 +680,7 @@ Hero Area
                             @if($recipe->products->count() > 0)
                                 <i class="fa-regular fa-tag pr-1 text-danger"></i>
                                 @foreach ($recipe->products as $product)
-                                    <a href="{{ route('recipeSingle',$product->slug) }}" class="ml-2"> {{ $product->title}}</a>
+                                    <a href="{{ route('productSingle',$product->slug) }}" class="ml-2"> {{ $product->title}}</a>
                                 @endforeach
                             @endif
                         </div>
@@ -998,82 +697,7 @@ Hero Area
         @endif
             
             
-            {{-- <div class="col-md-6 col-xl-4">
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="{{ asset('frontendFiles/assets/img/blog/blog_1_1.jpg')}}" alt="blog image">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <a href="blog.html"><i class="fa-regular fa-user"></i>By Pizzer</a>
-                            <a href="blog.html"><i class="fa-light fa-calendar-days"></i>15 July, 2022</a>
-                            <a href="blog.html"><i class="fa-regular fa-tag"></i>Suji recipes</a>
-                        </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Here is how you make Kesar Pulau from Agrim Suji</a></h3>
-                        <div class="blog-bottom">
-                            <a href="blog-details.html" class="line-btn">Read More</a>
-                            <a href="blog-details.html" class="comment"><i class="fa-regular fa-comments"></i>3 Comments</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="{{ asset('frontendFiles/assets/img/blog/blog_1_2.jpg')}}" alt="blog image">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <a href="blog.html"><i class="fa-regular fa-user"></i>By Pizzer</a>
-                            <a href="blog.html"><i class="fa-light fa-calendar-days"></i>16 July, 2022</a>
-                            <a href="blog.html"><i class="fa-regular fa-tag"></i>Chiura recipes</a>
-                        </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Making of button chiura from Agrim chiura</a></h3>
-                        <div class="blog-bottom">
-                            <a href="blog-details.html" class="line-btn">Read More</a>
-                            <a href="blog-details.html" class="comment"><i class="fa-regular fa-comments"></i>3 Comments</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="{{ asset('frontendFiles/assets/img/blog/blog_1_3.jpg')}}" alt="blog image">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <a href="blog.html"><i class="fa-regular fa-user"></i>By Pizzer</a>
-                            <a href="blog.html"><i class="fa-light fa-calendar-days"></i>17 July, 2022</a>
-                            <a href="blog.html"><i class="fa-regular fa-tag"></i>Maida recipes</a>
-                        </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Innovative Hot Chessy raw Pasta Make Creator.</a></h3>
-                        <div class="blog-bottom">
-                            <a href="blog-details.html" class="line-btn">Read More</a>
-                            <a href="blog-details.html" class="comment"><i class="fa-regular fa-comments"></i>3 Comments</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-xl-4">
-                <div class="blog-card">
-                    <div class="blog-img">
-                        <img src="{{ asset('frontendFiles/assets/img/blog/blog_1_4.jpg')}}" alt="blog image">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <a href="blog.html"><i class="fa-regular fa-user"></i>By Pizzer</a>
-                            <a href="blog.html"><i class="fa-light fa-calendar-days"></i>21 July, 2022</a>
-                            <a href="blog.html"><i class="fa-regular fa-tag"></i>Maida recipes</a>
-                        </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Best Hot Chessy raw In Pizza Makeing Trick.</a></h3>
-                        <div class="blog-bottom">
-                            <a href="blog-details.html" class="line-btn">Read More</a>
-                            <a href="blog-details.html" class="comment"><i class="fa-regular fa-comments"></i>3 Comments</a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
+         
         </div>
     </div>
     <div class="shape-mockup leaf jump-reverse" data-bottom="7%" data-left="0"><img src="{{ asset('frontendFiles/assets/img/shape/leaf_1.png')}}" alt="shape"></div>
@@ -1309,37 +933,7 @@ Hero Area
     </section> --}}
 
     <!--============================== Recipe Area ==============================-->
-    {{-- <section class="space bg-smoke2">
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title">
-                    Our Recipes
-                </span>
-                <h2 class="sec-title">Browse Our <span class="font-style text-theme">Recipes</span></h2>
-                <p class="sec-text ms-auto me-auto">{!! returnSiteSetting('product_description') !!}</p>
-            </div>
-            <div class="row as-carousel slider-shadow number-dots" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="3" data-sm-slide-show="2" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-lg-dots="true" data-md-dots="true">
-
-                @if (isset($recpies) && count($recpies)>0)
-                    @foreach ($recpies as $recpie)
-                    <div class="col-md-6 col-lg-4 col-xl-3">
-                        <div class="menu-card">
-                            <div class="menu-card_img">
-                                <img src="{{ getOrginalUrl($recpie->image_id)}}" alt="{{ $recpie->title }}">
-                            </div>
-                            <div class="menu-card_content">
-                                <h6><a href="shop-details.html">{{ $recpie->title }}</a></h6>
-                                <p class="menu-card_text">{{ $recpie->title}}</p>
-                                <a href="{{ route('productSingle',$recpie->slug) }}" class="as-btn">BROWSE RECPIE</a>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                @endif
-            
-            </div>
-        </div>
-    </section> --}}
+   
 @endsection
 
 @push('scripts')

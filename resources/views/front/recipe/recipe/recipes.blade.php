@@ -43,7 +43,7 @@
 @section('content')
 
     <!--==============================Breadcumb============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/breadcumb/breadcumb-bg.jpg">
+    <div class="breadcumb-wrapper " data-bg-src="">
         <div class="container z-index-common">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Re<span class="font-style text-theme2">cipes</span></h1>

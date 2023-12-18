@@ -46,6 +46,7 @@ class HomeController extends Controller
                     ->where('slug',$slug)
                     ->with(['seoable', 'productMeta','images','finishedProducts','category'])
                     ->first();
+        
         $relatedProducts = Product::where('category_id',$product->category_id)
                             ->where('id','!=',$product->id)
                             ->with('category')->limit(8)->get();

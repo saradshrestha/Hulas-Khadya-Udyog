@@ -6,12 +6,8 @@
    
 @endpush
 
-{{-- @section('banner')
-    @include('front.product.single.productsinglebanner')
-@endsection --}}
-
 @section('content')
-<div class="breadcumb-wrapper " data-bg-src="{{ asset('frontendFiles/assets/img/breadcumb/breadcumb-bg.jpg') }}">
+<div class="breadcumb-wrapper " data-bg-src="">
     <div class="container z-index-common">
         <div class="breadcumb-content">
             <h1 class="breadcumb-title">Product <span class="font-style text-theme2">Details</span></h1>
@@ -70,7 +66,7 @@
                        
                         <div class="product_meta">
                             <span class="sku_wrapper">SKU: <span class="sku">{{ $product->sku}}</span></span>
-                            <span class="posted_in">Category: <a href="shop.html" rel="tag">{{ $product->category->title }}</a></span>
+                            <span class="posted_in">Category: <a href="{{ route('productsByCategory',$product->category->slug) }}" rel="tag">{{ $product->category->title }}</a></span>
                            
                         </div>
                         {{-- <div class="share">
@@ -105,19 +101,23 @@
                             <ul class="comment-list">
                                
                                     @foreach ( $product->finishedProducts as $recipe)
+                                    {{-- {{ $recipe }} --}}
                                     <li class="review as-comment-item">
                                         <div class="as-post-comment">
-                                            <div class="comment-avater">
-                                                <img src="assets/img/blog/comment-author-3.jpg" alt="Comment Author">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h4 class="name">Mark Jack</h4>
-                                                <span class="commented-on"><i class="fal fa-calendar-alt"></i>22 April, 2022</span>
-                                                <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                                                    <span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
+                                            <a href="{{ route('recipeSingle',$recipe->slug) }}">
+                                                <div class="comment-avater">
+                                                    <img src="{{ getOrginalUrl($recipe->image_id) }}" alt="{{ $recipe->title ?? '' }}">
                                                 </div>
-                                                <p class="text">Completely build enabled web-readiness and distributed customer service. Proactively customize.</p>
-                                            </div>
+                                                <div class="comment-content mt-2">
+                                                    <h4 class="name">{{ $recipe->title ?? '' }}</h4>
+                                                    {{-- <span class="commented-on"><i class="fal fa-calendar-alt"></i>22 April, 2022</span> --}}
+                                                    {{-- <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
+                                                        <span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
+                                                    </div> --}}
+                                                    <p class="text">{{ Strip_tags(Str::limit($recipe->description,120,'...')) }}</p>
+                                                </div>
+                                            </a>
+                                           
                                         </div>
                                     </li>
                                     @endforeach
