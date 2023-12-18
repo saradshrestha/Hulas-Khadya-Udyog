@@ -101,7 +101,7 @@
                             <ul class="comment-list">
                                
                                     @foreach ( $product->finishedProducts as $recipe)
-                                    {{-- {{ $recipe }} --}}
+                                  
                                     <li class="review as-comment-item">
                                         <div class="as-post-comment">
                                             <a href="{{ route('recipeSingle',$recipe->slug) }}">
@@ -110,11 +110,8 @@
                                                 </div>
                                                 <div class="comment-content mt-2">
                                                     <h4 class="name">{{ $recipe->title ?? '' }}</h4>
-                                                    {{-- <span class="commented-on"><i class="fal fa-calendar-alt"></i>22 April, 2022</span> --}}
-                                                    {{-- <div class="star-rating" role="img" aria-label="Rated 5.00 out of 5">
-                                                        <span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5 based on <span class="rating">1</span> customer rating</span>
-                                                    </div> --}}
-                                                    <p class="text">{{ Strip_tags(Str::limit($recipe->description,120,'...')) }}</p>
+                                                    
+                                                    <p class="text">{{ Str::limit(Strip_tags($recipe->description),170,'...')}}</p>
                                                 </div>
                                             </a>
                                            

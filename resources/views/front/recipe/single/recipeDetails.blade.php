@@ -10,7 +10,7 @@
 <div class="breadcumb-wrapper " data-bg-src="{{ asset('') }}">
     <div class="container z-index-common">
         <div class="breadcumb-content">
-            <h1 class="breadcumb-title">Recipe<span class="font-style text-theme2">Details</span></h1>
+            <h1 class="breadcumb-title">Recipe <span class="font-style text-theme2">Details</span></h1>
             <ul class="breadcumb-menu">
                 <li><a href="{{ route('index')}}">Home</a></li>
                 <li>Recipe Details</li>
